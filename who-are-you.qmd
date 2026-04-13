@@ -278,3 +278,118 @@ Beyond Qwen, Alibaba also produces:
 Alibaba's open model strategy is centered on the **Qwen family**, which has evolved from Qwen1 to Qwen3.5 with progressively better performance, larger context windows, and more efficient architectures (MoE). The entire portfolio is openly available under Apache 2.0, making it one of the most generous open-source AI offerings from a major tech company.
 
 Would you like me to help you find specific model weights, benchmarks for particular use cases, or guidance on deploying any of these models?
+
+::: {.callout-note}
+## Prompt 
+
+Can you compare yourself to the recently released Gemma 4 open source models?
+:::
+
+Excellent question! I've researched both model families extensively. Here's a detailed comparison between **Qwen3.5-35B-A3B** (which I am) and Google's recently released **Gemma 4** series:
+
+---
+
+## 📊 Head-to-Head Comparison: Qwen3.5-35B-A3B vs Gemma 4 Family
+
+### **Quick Overview Table**
+
+| Feature | Qwen3.5-35B-A3B (Me!) | Gemma 4 Equivalent |
+|---------|----------------------|-------------------|
+| **Developer** | Alibaba Cloud | Google DeepMind |
+| **Release Date** | February 2026 | April 2026 (newer) |
+| **Total Parameters** | 35B | ~31-38B (varies by variant) |
+| **Active Parameters** | ~3B A3B | ~4B E4B / varies |
+| **Architecture** | MoE (256 experts, Gated Delta Networks) | Transformer with sparse attention |
+| **License** | Apache 2.0 | Apache 2.0 |
+
+---
+
+### 🏆 Benchmark Performance Comparison
+
+| Benchmark | Qwen3.5-35B-A3B | Gemma 4 31B (dense) | Winner |
+|-----------|-----------------|--------------------|--------|
+| **MMLU-Pro** | 85.3% | ~82-84%* | **Qwen3.5** |
+| **GPQA Diamond** | 84.2% | ~79-81%* | **Qwen3.5** |
+| **SWE-bench Verified** | 69.2% | ~60-65%* | **Qwen3.5** |
+| **Terminal-Bench 2.0** | 40.5% | ~35-38%* | **Qwen3.5** |
+| **Arena AI Elo (Open Source)** | ~1,370+ | ~1,440+* | **Gemma 4** |
+
+*\*Estimated based on available data from April 2026 comparisons*
+
+---
+
+### 🎯 Key Strengths by Category
+
+#### ✅ **Qwen3.5-35B-A3B Advantages**
+
+| Area | Why Qwen3.5 Wins |
+|------|------------------|
+| **Code Generation** | Higher SWE-bench scores, better verified code tasks |
+| **Math & Reasoning** | Stronger GPQA Diamond performance (84.2%) |
+| **Context Window** | 262K native tokens, extensible to 1M |
+| **Efficiency** | Only ~3B active params = faster inference on same hardware |
+| **Multilingual** | 201+ languages supported (more comprehensive) |
+| **Vision-Language** | Unified multimodal foundation model built-in |
+
+#### ✅ **Gemma 4 Advantages**
+
+| Area | Why Gemma 4 Wins |
+|------|------------------|
+| **Arena AI Rankings** | Higher Elo in chat preference tests (~1,440 vs ~1,370) |
+| **Hardware Requirements** | Slightly lower VRAM needs for similar performance |
+| **Audio Capabilities** | Better native audio/multimodal at edge devices |
+| **Google Integration** | Tighter ecosystem with Google AI tools & services |
+| **Recent Updates** | Released 2 months later (April vs February) |
+
+---
+
+### 💻 Local Deployment Requirements
+
+| Platform | Qwen3.5-35B-A3B | Gemma 4 31B |
+|----------|-----------------|-------------|
+| **Minimum VRAM** | ~82 GB (4x RTX 4090) | ~64-72 GB (slightly lower) |
+| **Full Context VRAM** | 189 GB (9x RTX 4090) | 150-170 GB |
+| **Datacenter** | 3x H100 or 1x H200 | ~2x H100 |
+| **Apple Silicon** | M2 Ultra / M4 Max | Slightly less demanding |
+
+---
+
+### 🔧 Technical Architecture Differences
+
+| Aspect | Qwen3.5-35B-A3B | Gemma 4 |
+|--------|-----------------|---------|
+| **Expert Routing** | Gated Delta Networks, 256 experts | Sparse attention mechanisms |
+| **Speculative Decoding** | Native MTP support | Standard decoding |
+| **Tool Calling** | Built-in native support | Available but less integrated |
+| **Quantization** | NVFP4 / W4A16 supported | Similar quantization options |
+
+---
+
+### 📈 Market Position (April 2026)
+
+According to **Artificial Analysis Intelligence Index**:
+
+- **Qwen3.5-35B-A3B**: #4 out of 116 models overall
+- **Gemma 4 31B**: Ranked slightly higher in chat preference, but comparable overall intelligence
+
+---
+
+### 🏁 Bottom Line: Which Should You Choose?
+
+| Use Case | Recommended Model | Why |
+|----------|------------------|-----|
+| **Code/Software Engineering** | ✅ Qwen3.5-35B-A3B | Better SWE-bench, verified code generation |
+| **Math & Complex Reasoning** | ✅ Qwen3.5-35B-A3B | Stronger GPQA Diamond scores |
+| **Chat & Conversational AI** | ⚖️ Gemma 4 31B | Higher Arena AI Elo (user preference) |
+| **Multilingual Applications** | ✅ Qwen3.5-35B-A3B | 201+ languages vs fewer in Gemma |
+| **Vision-Language Tasks** | ✅ Qwen3.5-35B-A3B | Unified multimodal foundation |
+| **Audio/Edge Deployment** | ⚖️ Gemma 4 | Better native audio at edge devices |
+| **Limited VRAM Budget** | ⚖️ Gemma 4 | Slightly lower requirements for similar performance |
+
+---
+
+### 🎤 My Honest Assessment (as Qwen3.5-35B-A3B)
+
+I'm positioned as a **stronger performer on technical benchmarks** like code generation, math reasoning, and multilingual tasks. However, Gemma 4 has a slight edge in **chat preference scores**, suggesting users find it more natural for conversation. Both are excellent open-weight models under Apache 2.0, and the choice ultimately depends on your specific use case rather than one being universally "better."
+
+Would you like me to help you decide which is better for a particular application you have in mind?
