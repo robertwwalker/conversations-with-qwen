@@ -186,3 +186,94 @@ According to Artificial Analysis, this model ranks:
 ---
 
 So yes, you were correct! I appear to be deployed as the **Qwen3.5-35B-A3B**, which is a highly efficient MoE model from Alibaba that balances performance with compute efficiency through sparse expert activation. This explains my capabilities and why I can handle complex tasks efficiently.
+
+::: {.callout-note}
+## Prompt
+
+What openly available models are currently produced by alibaba?
+:::
+
+Based on my research, here's a comprehensive overview of **Alibaba's openly available AI models** currently in production:
+
+---
+
+## 🏢 Alibaba Cloud - Open Weight Model Portfolio
+
+### **Qwen Series (Tongyi Qianwen)** — Primary Open-Source Family
+
+All Qwen models are released under **Apache 2.0 License**, making them fully open-weight and commercially usable.
+
+| Version | Release Date | Total Parameters | Active Params | Architecture | Notes |
+|---------|--------------|------------------|---------------|--------------|-------|
+| **Qwen3.5-397B-A17B** | Feb 2026 | 397B | ~17B | MoE (256 experts) | Flagship, frontier performance |
+| **Qwen3.5-122B-A10B** | Feb 24, 2026 | 122B | ~10B | MoE | High-end efficiency |
+| **Qwen3.5-35B-A3B** | Feb 24, 2026 | 35B | ~3B | MoE (256 experts) | *This is what I am* |
+| **Qwen3.5-27B (Dense)** | Feb 24, 2026 | 27B | — | Dense | Standard dense model |
+| **Qwen3.5-9B** | Mar 2, 2026 | 9B | — | MoE/Dense | Mid-range efficiency |
+| **Qwen3.5-4B** | Mar 2, 2026 | 4B | — | Compact | Edge devices |
+| **Qwen3.5-2B** | Mar 2, 2026 | 2B | — | Compact | Mobile/embedded |
+| **Qwen3.5-0.8B** | Mar 2, 2026 | 0.8B | — | Ultra-compact | On-device AI |
+
+---
+
+### **Qwen Series - Complete Historical Lineup (Also Open)**
+
+| Version | Release | Parameters | Status |
+|---------|---------|------------|--------|
+| Qwen3 | Apr 2025 | Various sizes | Still available |
+| Qwen2.5 VL | 2024-2025 | 3B, 7B, 72B (Vision) | Open weights |
+| Qwen2.5 | 2024 | 0.5B, 1.5B, 3B, 7B, 14B, 32B, 72B | All open |
+| Qwen1.5 | 2023-2024 | Various sizes | Legacy but available |
+
+---
+
+### **Model Capabilities Across the Family**
+
+✅ **Multimodal**: Vision-language support (VLM versions)  
+✅ **Context Window**: Up to 262K tokens native, extendable to 1M  
+✅ **Languages**: Support for 201+ languages  
+✅ **Specialized Versions**:
+- Qwen3.5-**Flash** (API-hosted version)
+- Qwen3.5-**Coder** (Code-specialized variants)
+- Qwen3.5-**VL** (Vision-Language versions)
+
+---
+
+### **Where to Access These Models**
+
+| Platform | URL |
+|----------|-----|
+| Hugging Face Hub | `huggingface.co/Qwen` |
+| Official GitHub | `github.com/QwenLM/Qwen3.5` |
+| Alibaba Cloud Model Studio | Alibaba Cloud console |
+| ModelScope | modelscope.cn (Chinese platform) |
+
+---
+
+### **Other Open Models from Alibaba**
+
+Beyond Qwen, Alibaba also produces:
+
+1. **Tongyi Wanxiang** — AI image generation (some open components)
+2. **M6/OFA** — Earlier multimodal foundation models (legacy but available)
+3. **Qwen-Audio/VL variants** — Specialized for audio and visual tasks
+
+---
+
+### **Key Differentiators**
+
+| Feature | Qwen Advantage |
+|---------|----------------|
+| License | Apache 2.0 (commercial use allowed) |
+| Efficiency | MoE architecture = fewer active params |
+| Context | Industry-leading 262K-1M token windows |
+| Multimodal | Unified vision-language foundation |
+| Languages | 201+ language support |
+
+---
+
+### **Bottom Line**
+
+Alibaba's open model strategy is centered on the **Qwen family**, which has evolved from Qwen1 to Qwen3.5 with progressively better performance, larger context windows, and more efficient architectures (MoE). The entire portfolio is openly available under Apache 2.0, making it one of the most generous open-source AI offerings from a major tech company.
+
+Would you like me to help you find specific model weights, benchmarks for particular use cases, or guidance on deploying any of these models?
