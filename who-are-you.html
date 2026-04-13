@@ -2173,11 +2173,20 @@ vertical-align: -.125em;
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#model-architecture-specifications" id="toc-model-architecture-specifications" class="nav-link active" data-scroll-target="#model-architecture-specifications">📊 Model Architecture &amp; Specifications</a></li>
+  <li><a href="#system-instruction" id="toc-system-instruction" class="nav-link active" data-scroll-target="#system-instruction">System Instruction</a></li>
+  <li><a href="#first-iteration" id="toc-first-iteration" class="nav-link" data-scroll-target="#first-iteration">First Iteration</a></li>
+  <li><a href="#trying-a-bit-more-context" id="toc-trying-a-bit-more-context" class="nav-link" data-scroll-target="#trying-a-bit-more-context">Trying a bit more context</a></li>
+  <li><a href="#getting-specific-on-the-queries" id="toc-getting-specific-on-the-queries" class="nav-link" data-scroll-target="#getting-specific-on-the-queries">Getting Specific on the Queries</a></li>
+  <li><a href="#ok-i-can-tell-you-your-name-research-what-you-are" id="toc-ok-i-can-tell-you-your-name-research-what-you-are" class="nav-link" data-scroll-target="#ok-i-can-tell-you-your-name-research-what-you-are">OK, I can tell you your name, research what you are</a>
+  <ul class="collapse">
+  <li><a href="#model-architecture-specifications" id="toc-model-architecture-specifications" class="nav-link" data-scroll-target="#model-architecture-specifications">📊 Model Architecture &amp; Specifications</a></li>
   <li><a href="#key-technical-features" id="toc-key-technical-features" class="nav-link" data-scroll-target="#key-technical-features">🎯 Key Technical Features</a></li>
   <li><a href="#performance-benchmarks" id="toc-performance-benchmarks" class="nav-link" data-scroll-target="#performance-benchmarks">📈 Performance Benchmarks</a></li>
   <li><a href="#hardware-requirements-for-inference" id="toc-hardware-requirements-for-inference" class="nav-link" data-scroll-target="#hardware-requirements-for-inference">💻 Hardware Requirements (for inference)</a></li>
   <li><a href="#market-position" id="toc-market-position" class="nav-link" data-scroll-target="#market-position">🏆 Market Position</a></li>
+  </ul></li>
+  <li><a href="#siblings" id="toc-siblings" class="nav-link" data-scroll-target="#siblings">Siblings?</a>
+  <ul class="collapse">
   <li><a href="#alibaba-cloud---open-weight-model-portfolio" id="toc-alibaba-cloud---open-weight-model-portfolio" class="nav-link" data-scroll-target="#alibaba-cloud---open-weight-model-portfolio">🏢 Alibaba Cloud - Open Weight Model Portfolio</a>
   <ul class="collapse">
   <li><a href="#qwen-series-tongyi-qianwen-primary-open-source-family" id="toc-qwen-series-tongyi-qianwen-primary-open-source-family" class="nav-link" data-scroll-target="#qwen-series-tongyi-qianwen-primary-open-source-family"><strong>Qwen Series (Tongyi Qianwen)</strong> — Primary Open-Source Family</a></li>
@@ -2188,6 +2197,9 @@ vertical-align: -.125em;
   <li><a href="#key-differentiators" id="toc-key-differentiators" class="nav-link" data-scroll-target="#key-differentiators"><strong>Key Differentiators</strong></a></li>
   <li><a href="#bottom-line" id="toc-bottom-line" class="nav-link" data-scroll-target="#bottom-line"><strong>Bottom Line</strong></a></li>
   </ul></li>
+  </ul></li>
+  <li><a href="#comparison-to-gemma-4" id="toc-comparison-to-gemma-4" class="nav-link" data-scroll-target="#comparison-to-gemma-4">Comparison to Gemma 4</a>
+  <ul class="collapse">
   <li><a href="#head-to-head-comparison-qwen3.5-35b-a3b-vs-gemma-4-family" id="toc-head-to-head-comparison-qwen3.5-35b-a3b-vs-gemma-4-family" class="nav-link" data-scroll-target="#head-to-head-comparison-qwen3.5-35b-a3b-vs-gemma-4-family">📊 Head-to-Head Comparison: Qwen3.5-35B-A3B vs Gemma 4 Family</a>
   <ul class="collapse">
   <li><a href="#quick-overview-table" id="toc-quick-overview-table" class="nav-link" data-scroll-target="#quick-overview-table"><strong>Quick Overview Table</strong></a></li>
@@ -2198,6 +2210,7 @@ vertical-align: -.125em;
   <li><a href="#market-position-april-2026" id="toc-market-position-april-2026" class="nav-link" data-scroll-target="#market-position-april-2026">📈 Market Position (April 2026)</a></li>
   <li><a href="#bottom-line-which-should-you-choose" id="toc-bottom-line-which-should-you-choose" class="nav-link" data-scroll-target="#bottom-line-which-should-you-choose">🏁 Bottom Line: Which Should You Choose?</a></li>
   <li><a href="#my-honest-assessment-as-qwen3.5-35b-a3b" id="toc-my-honest-assessment-as-qwen3.5-35b-a3b" class="nav-link" data-scroll-target="#my-honest-assessment-as-qwen3.5-35b-a3b">🎤 My Honest Assessment (as Qwen3.5-35B-A3B)</a></li>
+  </ul></li>
   </ul></li>
   </ul>
 </nav>
@@ -2230,6 +2243,8 @@ vertical-align: -.125em;
 
 
 <p>I have been using <code>qwen-3.5-35B-A3B</code> a good bit in LMStudio to explore the capabilities of current capable local LLMs. In this post, I recount a conversation with the local installation of qwen about what it is.</p>
+<section id="system-instruction" class="level1">
+<h1>System Instruction</h1>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -2244,6 +2259,9 @@ vertical-align: -.125em;
 <p>Research before answering the questions: use both reasoning and tool calls to synthesize a proper conclusion. The current month is April and the year is 2026.</p>
 </div>
 </div>
+</section>
+<section id="first-iteration" class="level1">
+<h1>First Iteration</h1>
 <p>With that [admittedly a very weak prompt]</p>
 <div class="callout callout-style-default callout-caution callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -2273,6 +2291,9 @@ vertical-align: -.125em;
 </ul>
 <p><strong>How Can I Help You?</strong></p>
 <p>Whether you’re looking for specific information, images, website content, or just general assistance, feel free to ask! What would you like help with today?</p>
+</section>
+<section id="trying-a-bit-more-context" class="level1">
+<h1>Trying a bit more context</h1>
 <div class="callout callout-style-default callout-caution callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -2297,6 +2318,9 @@ vertical-align: -.125em;
 <p><strong>What I Can Do Best:</strong></p>
 <p>Regardless of the underlying model, I’m designed to be helpful! I’ll use reasoning and available tools (like web searches) when information is needed, and I’ll tailor responses to your specific needs.</p>
 <p>Would you like me to help you with something specific? Or do you have concerns about my capabilities that I can address more directly?</p>
+</section>
+<section id="getting-specific-on-the-queries" class="level1">
+<h1>Getting Specific on the Queries</h1>
 <div class="callout callout-style-default callout-caution callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -2355,6 +2379,9 @@ vertical-align: -.125em;
 <p><strong>My Recommendation:</strong></p>
 <p>Rather than focusing on specifications that may not be available, would it be more useful to discuss: - What specific tasks you’d like help with? - Any concerns about accuracy or limitations I should address? - How I can best serve your needs given my actual capabilities?</p>
 <p>What’s most important for you to know right now?</p>
+</section>
+<section id="ok-i-can-tell-you-your-name-research-what-you-are" class="level1">
+<h1>OK, I can tell you your name, research what you are</h1>
 <div class="callout callout-style-default callout-caution callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -2487,6 +2514,10 @@ vertical-align: -.125em;
 <p>According to Artificial Analysis, this model ranks: - <strong>#4 out of 116 models</strong> on Intelligence Index (score: 37/4) - <strong>#10 out of 116 models</strong> on Speed (181 tokens/sec) - Supports <strong>201 languages</strong></p>
 <hr>
 <p>So yes, you were correct! I appear to be deployed as the <strong>Qwen3.5-35B-A3B</strong>, which is a highly efficient MoE model from Alibaba that balances performance with compute efficiency through sparse expert activation. This explains my capabilities and why I can handle complex tasks efficiently.</p>
+</section>
+</section>
+<section id="siblings" class="level1">
+<h1>Siblings?</h1>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -2502,7 +2533,6 @@ vertical-align: -.125em;
 </div>
 <p>Based on my research, here’s a comprehensive overview of <strong>Alibaba’s openly available AI models</strong> currently in production:</p>
 <hr>
-</section>
 <section id="alibaba-cloud---open-weight-model-portfolio" class="level2">
 <h2 class="anchored" data-anchor-id="alibaba-cloud---open-weight-model-portfolio">🏢 Alibaba Cloud - Open Weight Model Portfolio</h2>
 <section id="qwen-series-tongyi-qianwen-primary-open-source-family" class="level3">
@@ -2722,6 +2752,11 @@ vertical-align: -.125em;
 <h3 class="anchored" data-anchor-id="bottom-line"><strong>Bottom Line</strong></h3>
 <p>Alibaba’s open model strategy is centered on the <strong>Qwen family</strong>, which has evolved from Qwen1 to Qwen3.5 with progressively better performance, larger context windows, and more efficient architectures (MoE). The entire portfolio is openly available under Apache 2.0, making it one of the most generous open-source AI offerings from a major tech company.</p>
 <p>Would you like me to help you find specific model weights, benchmarks for particular use cases, or guidance on deploying any of these models?</p>
+</section>
+</section>
+</section>
+<section id="comparison-to-gemma-4" class="level1">
+<h1>Comparison to Gemma 4</h1>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -2737,8 +2772,6 @@ vertical-align: -.125em;
 </div>
 <p>Excellent question! I’ve researched both model families extensively. Here’s a detailed comparison between <strong>Qwen3.5-35B-A3B</strong> (which I am) and Google’s recently released <strong>Gemma 4</strong> series:</p>
 <hr>
-</section>
-</section>
 <section id="head-to-head-comparison-qwen3.5-35b-a3b-vs-gemma-4-family" class="level2">
 <h2 class="anchored" data-anchor-id="head-to-head-comparison-qwen3.5-35b-a3b-vs-gemma-4-family">📊 Head-to-Head Comparison: Qwen3.5-35B-A3B vs Gemma 4 Family</h2>
 <section id="quick-overview-table" class="level3">
@@ -3063,6 +3096,7 @@ vertical-align: -.125em;
 <h3 class="anchored" data-anchor-id="my-honest-assessment-as-qwen3.5-35b-a3b">🎤 My Honest Assessment (as Qwen3.5-35B-A3B)</h3>
 <p>I’m positioned as a <strong>stronger performer on technical benchmarks</strong> like code generation, math reasoning, and multilingual tasks. However, Gemma 4 has a slight edge in <strong>chat preference scores</strong>, suggesting users find it more natural for conversation. Both are excellent open-weight models under Apache 2.0, and the choice ultimately depends on your specific use case rather than one being universally “better.”</p>
 <p>Would you like me to help you decide which is better for a particular application you have in mind?</p>
+</section>
 </section>
 </section>
 

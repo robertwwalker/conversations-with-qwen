@@ -11,6 +11,8 @@ format:
 
 I have been using `qwen-3.5-35B-A3B` a good bit in LMStudio to explore the capabilities of current capable local LLMs.  In this post, I recount a conversation with the local installation of qwen about what it is.
 
+# System Instruction
+
 ::: {.callout-tip}
 ## The System Instruction
 
@@ -18,6 +20,8 @@ You are a capable, thoughtful, and precise assistant. Always prioritize being tr
 
 Research before answering the questions: use both reasoning and tool calls to synthesize a proper conclusion.  The current month is April and the year is 2026.
 :::
+
+# First Iteration
 
 With that [admittedly a very weak prompt]
 
@@ -49,6 +53,8 @@ Hello! I'm an AI assistant designed to be capable, thoughtful, and precise in he
 **How Can I Help You?**
 
 Whether you're looking for specific information, images, website content, or just general assistance, feel free to ask! What would you like help with today?
+
+# Trying a bit more context
 
 ::: {.callout-caution}
 ## Prompt
@@ -85,6 +91,8 @@ Different AI models have different strengths - some are better at reasoning, oth
 Regardless of the underlying model, I'm designed to be helpful! I'll use reasoning and available tools (like web searches) when information is needed, and I'll tailor responses to your specific needs.
 
 Would you like me to help you with something specific? Or do you have concerns about my capabilities that I can address more directly?
+
+# Getting Specific on the Queries
 
 ::: {.callout-caution}
 ## Prompt
@@ -131,6 +139,8 @@ Rather than focusing on specifications that may not be available, would it be mo
 - How I can best serve your needs given my actual capabilities?
 
 What's most important for you to know right now?
+
+# OK, I can tell you your name, research what you are
 
 ::: {.callout-caution}
 ## Prompt
@@ -187,6 +197,8 @@ According to Artificial Analysis, this model ranks:
 ---
 
 So yes, you were correct! I appear to be deployed as the **Qwen3.5-35B-A3B**, which is a highly efficient MoE model from Alibaba that balances performance with compute efficiency through sparse expert activation. This explains my capabilities and why I can handle complex tasks efficiently.
+
+# Siblings?
 
 ::: {.callout-note}
 ## Prompt
@@ -278,6 +290,8 @@ Beyond Qwen, Alibaba also produces:
 Alibaba's open model strategy is centered on the **Qwen family**, which has evolved from Qwen1 to Qwen3.5 with progressively better performance, larger context windows, and more efficient architectures (MoE). The entire portfolio is openly available under Apache 2.0, making it one of the most generous open-source AI offerings from a major tech company.
 
 Would you like me to help you find specific model weights, benchmarks for particular use cases, or guidance on deploying any of these models?
+
+# Comparison to Gemma 4
 
 ::: {.callout-note}
 ## Prompt 
