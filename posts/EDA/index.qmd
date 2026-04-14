@@ -9,7 +9,7 @@ format:
     embed-resources: true
 ---
 
-I have been using `qwen-3.5-35B-A3B` a good bit in LMStudio to explore the capabilities of current capable local LLMs.  In this post, I recount a conversation with the local installation of qwen about what it is.
+`qwen` and I carry out the construction and project plan for an agentic EDA.  Using web search and related tools, `qwen` surveys packages for R and python, distills capabilities, and produces a plan for developing the software.
 
 # System Instruction
 

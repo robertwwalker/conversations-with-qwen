@@ -6,10 +6,9 @@ image: "img/SystemRole.png"
 toc: true
 ---
 
-A `conversation with qwen 3.5 on AI and ethics`?
+`qwen 3.5` on `AI and ethics`?
 
 ![](img/SystemRole.png)
-# Interaction 1
 
 ::: {.callout-note}
 ## Prompt

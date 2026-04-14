@@ -6,7 +6,7 @@ image: "img/SystemRole.png"
 toc: true
 ---
 
-A `conversation with qwen 3.5`. `What is the system role`?
+`qwen 3.5` answers `What is the system role`?
 
 ![](img/SystemRole.png)
 # Interaction 1

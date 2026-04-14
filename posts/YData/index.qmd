@@ -13,7 +13,7 @@ tldr; qwen gets the assist on implementing ydata-profiling
 
 ![](image.png)
 
-I have been using `qwen-3.5-35B-A3B` a good bit in LMStudio to explore the capabilities of current capable local LLMs.  I ask qwen about YDataProfiling, a python package for exploratory data analysis.
+`qwen-3.5-35B-A3B` follows up from the EDA post on YDataProfiling, a python package for exploratory data analysis.
 
 # System Instruction
 

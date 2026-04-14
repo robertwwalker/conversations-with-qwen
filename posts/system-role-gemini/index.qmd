@@ -6,7 +6,7 @@ image: "img/Gemini.png"
 toc: true
 ---
 
-A `conversation with Gemini thinking`. `What is the system role`?
+`Gemini thinking` answers `What is the system role`?
 
 ::: {.callout-note}
 ## Prompt

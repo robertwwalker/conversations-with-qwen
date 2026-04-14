@@ -3,6 +3,7 @@
     "listing": "/index.html",
     "items": [
       "/posts/system-role-gemini/index.html",
+      "/posts/prompt-injection/index.html",
       "/posts/AI-Ethics/index.html",
       "/posts/system-role/index.html",
       "/posts/SweetViz/index.html",
