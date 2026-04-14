@@ -1,6 +1,9 @@
 project:
   type: website
   output-dir: docs
+  resources:
+    - img/
+
 
 website:
   description: "Conversations with qwen 3.5"

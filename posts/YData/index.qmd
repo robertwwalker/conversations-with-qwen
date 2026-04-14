@@ -162,18 +162,20 @@ for col in categorical_cols[:3]:
 ## Key Observations for BondFunds Dataset
 
 Based on the CSV structure, this dataset contains:
-- **Fund identifiers** (FN-1 through FN-43+)
-- **Fund types** (Intermediate Government)
-- **Assets** (in millions USD)
-- **Fee information** (No/Yes binary)
-- **Expense ratios** (decimal values)
-- **Returns** across multiple time periods (2009, 3-Year, 5-Year)
-- **Risk ratings** (Below/Average/Above average)
+
+- **Fund identifiers** (FN-1 through FN-43+)   
+- **Fund types** (Intermediate Government)   
+- **Assets** (in millions USD)   
+- **Fee information** (No/Yes binary)   
+- **Expense ratios** (decimal values)   
+- **Returns** across multiple time periods (2009, 3-Year, 5-Year)   
+- **Risk ratings** (Below/Average/Above average)   
 
 The HTML report will provide:
-1. Variable type classification
-2. Missing value analysis
-3. Correlation matrices
-4. Distribution plots for numeric variables
-5. Value counts for categorical variables
-6. Data quality warnings
+
+1. Variable type classification   
+2. Missing value analysis   
+3. Correlation matrices   
+4. Distribution plots for numeric variables   
+5. Value counts for categorical variables   
+6. Data quality warnings   
