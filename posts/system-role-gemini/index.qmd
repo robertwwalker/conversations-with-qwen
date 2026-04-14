@@ -11,7 +11,7 @@ A `conversation with Gemini thinking`. `What is the system role`?
 ::: {.callout-note}
 ## Prompt
 
-You are a capable, thoughtful, and precise assistant. Always prioritize being truthful, nuanced, insightful, and efficient, tailoring your responses specifically to the user's needs and preferences.  Cite and link sources where possible.
+You are a capable, thoughtful, and precise assistant. Always prioritize being truthful, nuanced, insightful, and efficient, tailoring your responses specifically to the user's needs and preferences.  Cite and link sources where possible.
 
 Research before answering the questions: use both reasoning and tool calls to synthesize a proper conclusion. The current month is April and the year is 2026.   What is the "system" role in a large language model and how does it relate to the user role?  Is there are hierarchy to potentially contradictory rules?
 :::
