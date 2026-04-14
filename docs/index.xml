@@ -20,6 +20,7 @@
 
 
 
+<p>tldr; qwen and I implement SweetViz EDA tools in python.</p>
 <p><img src="https://robertwwalker.github.io/conversations-with-qwen/posts/SweetViz/image.png" class="img-fluid"></p>
 <p>I have been using <code>qwen-3.5-35B-A3B</code> a good bit in LMStudio to explore the capabilities of current capable local LLMs. In this post, I recount a conversation with the local installation of qwen about SweetViz, a python package for exploratory data visualization.</p>
 <section id="system-instruction" class="level1">
@@ -219,8 +220,8 @@ Feature: Expense Ratio                       |█████     | [ 50%]   00:
 Feature: Expense Ratio                       |██████    | [ 60%]   00:01 -&gt; (00:00 left)
 Feature: Return 2009                         |██████    | [ 60%]   00:01 -&gt; (00:00 left)
 Feature: 3-Year Return                       |███████   | [ 70%]   00:01 -&gt; (00:00 left)
-Feature: 3-Year Return                       |████████  | [ 80%]   00:02 -&gt; (00:00 left)
-Feature: 5-Year Return                       |████████  | [ 80%]   00:02 -&gt; (00:00 left)
+Feature: 3-Year Return                       |████████  | [ 80%]   00:01 -&gt; (00:00 left)
+Feature: 5-Year Return                       |████████  | [ 80%]   00:01 -&gt; (00:00 left)
 Feature: 5-Year Return                       |█████████ | [ 90%]   00:02 -&gt; (00:00 left)
 Feature: Risk                                |█████████ | [ 90%]   00:02 -&gt; (00:00 left)
 Feature: Risk                                |██████████| [100%]   00:02 -&gt; (00:00 left)
@@ -282,7 +283,9 @@ font-style: inherit;"># - Categorical frequency distributions</span></span></cod
 
 
 
-<p>I have been using <code>qwen-3.5-35B-A3B</code> a good bit in LMStudio to explore the capabilities of current capable local LLMs. In this post, I recount a conversation with the local installation of qwen about YDataProfiling, a python package for exploratory data analysis.</p>
+<p>tldr; qwen gets the assist on implementing ydata-profiling</p>
+<p><img src="https://robertwwalker.github.io/conversations-with-qwen/posts/YData/image.png" class="img-fluid"></p>
+<p>I have been using <code>qwen-3.5-35B-A3B</code> a good bit in LMStudio to explore the capabilities of current capable local LLMs. I ask qwen about YDataProfiling, a python package for exploratory data analysis.</p>
 <section id="system-instruction" class="level1">
 <h1>System Instruction</h1>
 <div class="callout callout-style-default callout-tip callout-titled">
@@ -529,76 +532,71 @@ Summarize dataset:   0%|          | 0/5 [00:00&lt;?, ?it/s]
 Summarize dataset:   0%|          | 0/14 [00:00&lt;?, ?it/s, Describe variable: Fund Number]
 Summarize dataset:   0%|          | 0/14 [00:00&lt;?, ?it/s, Describe variable: Type]       
 Summarize dataset:   0%|          | 0/14 [00:00&lt;?, ?it/s, Describe variable: Assets]
-Summarize dataset:   7%|7         | 1/14 [00:00&lt;00:00, 55.43it/s, Describe variable: Fees]
-Summarize dataset:   7%|7         | 1/14 [00:00&lt;00:00, 40.71it/s, Describe variable: Expense Ratio]
-Summarize dataset:  14%|#4        | 2/14 [00:00&lt;00:00, 55.10it/s, Describe variable: Return 2009]  /usr/lib/python3.12/contextlib.py:137: Pandas4Warning: 'future.no_silent_downcasting' is deprecated, please refrain from using it.
-  return next(self.gen)
-
-Summarize dataset:  14%|#4        | 2/14 [00:00&lt;00:00, 46.98it/s, Describe variable: 3-Year Return]
-Summarize dataset:  14%|#4        | 2/14 [00:00&lt;00:00, 46.49it/s, Describe variable: 5-Year Return]/usr/lib/python3.12/contextlib.py:137: Pandas4Warning: 'future.no_silent_downcasting' is deprecated, please refrain from using it.
-  return next(self.gen)
-
-Summarize dataset:  36%|###5      | 5/14 [00:00&lt;00:00, 65.73it/s, Describe variable: Risk]         
+Summarize dataset:   7%|7         | 1/14 [00:00&lt;00:00, 57.15it/s, Describe variable: Fees]
+Summarize dataset:   7%|7         | 1/14 [00:00&lt;00:00, 46.87it/s, Describe variable: Expense Ratio]
+Summarize dataset:  14%|#4        | 2/14 [00:00&lt;00:00, 80.66it/s, Describe variable: Return 2009]  
+Summarize dataset:  14%|#4        | 2/14 [00:00&lt;00:00, 73.75it/s, Describe variable: 3-Year Return]
+Summarize dataset:  36%|###5      | 5/14 [00:00&lt;00:00, 108.07it/s, Describe variable: Risk]        
+Summarize dataset:  36%|###5      | 5/14 [00:00&lt;00:00, 103.37it/s, Describe variable: Risk]
 
   0%|          | 0/9 [00:00&lt;?, ?it/s][A
-100%|##########| 9/9 [00:00&lt;00:00, 512.21it/s]
+100%|##########| 9/9 [00:00&lt;00:00, 385.39it/s]
 
-Summarize dataset:  64%|######4   | 9/14 [00:00&lt;00:00, 93.10it/s, Get variable types]     
-Summarize dataset:  67%|######6   | 10/15 [00:00&lt;00:00, 103.35it/s, Get dataframe statistics]
-Summarize dataset:  69%|######8   | 11/16 [00:00&lt;00:00, 112.41it/s, Calculate auto correlation]
-Summarize dataset:  75%|#######5  | 12/16 [00:00&lt;00:00, 68.03it/s, Calculate auto correlation] 
-Summarize dataset:  75%|#######5  | 12/16 [00:00&lt;00:00, 68.03it/s, Get scatter matrix]        
-Summarize dataset:  29%|##9       | 12/41 [00:00&lt;00:00, 68.03it/s, scatter Assets, Assets]
-Summarize dataset:  32%|###1      | 13/41 [00:00&lt;00:00, 68.03it/s, scatter Expense Ratio, Assets]
-Summarize dataset:  34%|###4      | 14/41 [00:00&lt;00:00, 68.03it/s, scatter Return 2009, Assets]  
-Summarize dataset:  37%|###6      | 15/41 [00:00&lt;00:00, 68.03it/s, scatter 3-Year Return, Assets]
-Summarize dataset:  39%|###9      | 16/41 [00:00&lt;00:00, 68.03it/s, scatter 5-Year Return, Assets]
-Summarize dataset:  41%|####1     | 17/41 [00:00&lt;00:00, 68.03it/s, scatter Assets, Expense Ratio]
-Summarize dataset:  44%|####3     | 18/41 [00:00&lt;00:00, 68.03it/s, scatter Expense Ratio, Expense Ratio]
-Summarize dataset:  46%|####6     | 19/41 [00:00&lt;00:00, 29.75it/s, scatter Expense Ratio, Expense Ratio]
-Summarize dataset:  46%|####6     | 19/41 [00:00&lt;00:00, 29.75it/s, scatter Return 2009, Expense Ratio]  
-Summarize dataset:  49%|####8     | 20/41 [00:00&lt;00:00, 29.75it/s, scatter 3-Year Return, Expense Ratio]
-Summarize dataset:  51%|#####1    | 21/41 [00:00&lt;00:00, 29.75it/s, scatter 5-Year Return, Expense Ratio]
-Summarize dataset:  54%|#####3    | 22/41 [00:00&lt;00:00, 29.75it/s, scatter Assets, Return 2009]         
-Summarize dataset:  56%|#####6    | 23/41 [00:00&lt;00:00, 25.22it/s, scatter Assets, Return 2009]
-Summarize dataset:  56%|#####6    | 23/41 [00:00&lt;00:00, 25.22it/s, scatter Expense Ratio, Return 2009]
-Summarize dataset:  59%|#####8    | 24/41 [00:00&lt;00:00, 25.22it/s, scatter Return 2009, Return 2009]  
-Summarize dataset:  61%|######    | 25/41 [00:00&lt;00:00, 25.22it/s, scatter 3-Year Return, Return 2009]
-Summarize dataset:  63%|######3   | 26/41 [00:00&lt;00:00, 23.26it/s, scatter 3-Year Return, Return 2009]
-Summarize dataset:  63%|######3   | 26/41 [00:00&lt;00:00, 23.26it/s, scatter 5-Year Return, Return 2009]
-Summarize dataset:  66%|######5   | 27/41 [00:01&lt;00:00, 23.26it/s, scatter Assets, 3-Year Return]     
-Summarize dataset:  68%|######8   | 28/41 [00:01&lt;00:00, 23.26it/s, scatter Expense Ratio, 3-Year Return]
-Summarize dataset:  71%|#######   | 29/41 [00:01&lt;00:00, 22.03it/s, scatter Expense Ratio, 3-Year Return]
-Summarize dataset:  71%|#######   | 29/41 [00:01&lt;00:00, 22.03it/s, scatter Return 2009, 3-Year Return]  
-Summarize dataset:  73%|#######3  | 30/41 [00:01&lt;00:00, 22.03it/s, scatter 3-Year Return, 3-Year Return]
-Summarize dataset:  76%|#######5  | 31/41 [00:01&lt;00:00, 22.03it/s, scatter 5-Year Return, 3-Year Return]
-Summarize dataset:  78%|#######8  | 32/41 [00:01&lt;00:00, 21.77it/s, scatter 5-Year Return, 3-Year Return]
-Summarize dataset:  78%|#######8  | 32/41 [00:01&lt;00:00, 21.77it/s, scatter Assets, 5-Year Return]       
-Summarize dataset:  80%|########  | 33/41 [00:01&lt;00:00, 21.77it/s, scatter Expense Ratio, 5-Year Return]
-Summarize dataset:  83%|########2 | 34/41 [00:01&lt;00:00, 21.77it/s, scatter Return 2009, 5-Year Return]  
-Summarize dataset:  85%|########5 | 35/41 [00:01&lt;00:00, 20.70it/s, scatter Return 2009, 5-Year Return]
-Summarize dataset:  85%|########5 | 35/41 [00:01&lt;00:00, 20.70it/s, scatter 3-Year Return, 5-Year Return]
-Summarize dataset:  88%|########7 | 36/41 [00:01&lt;00:00, 20.70it/s, scatter 5-Year Return, 5-Year Return]
-Summarize dataset:  86%|########6 | 37/43 [00:01&lt;00:00, 20.70it/s, Missing diagram bar]                 
-Summarize dataset:  88%|########8 | 38/43 [00:01&lt;00:00, 17.49it/s, Missing diagram bar]
-Summarize dataset:  88%|########8 | 38/43 [00:01&lt;00:00, 17.49it/s, Missing diagram matrix]
-Summarize dataset:  91%|######### | 39/43 [00:01&lt;00:00, 17.49it/s, Take sample]           
-Summarize dataset:  93%|#########3| 40/43 [00:01&lt;00:00, 17.49it/s, Detecting duplicates]
-Summarize dataset:  95%|#########5| 41/43 [00:01&lt;00:00, 17.49it/s, Get alerts]          
-Summarize dataset:  98%|#########7| 42/43 [00:01&lt;00:00, 17.49it/s, Get reproduction details]
-Summarize dataset: 100%|##########| 43/43 [00:01&lt;00:00, 17.49it/s, Completed]               
-Summarize dataset: 100%|##########| 43/43 [00:01&lt;00:00, 25.06it/s, Completed]
+Summarize dataset:  64%|######4   | 9/14 [00:00&lt;00:00, 119.37it/s, Get variable types]     
+Summarize dataset:  67%|######6   | 10/15 [00:00&lt;00:00, 132.50it/s, Get dataframe statistics]
+Summarize dataset:  69%|######8   | 11/16 [00:00&lt;00:00, 143.82it/s, Calculate auto correlation]
+Summarize dataset:  75%|#######5  | 12/16 [00:00&lt;00:00, 74.43it/s, Calculate auto correlation] 
+Summarize dataset:  75%|#######5  | 12/16 [00:00&lt;00:00, 74.43it/s, Get scatter matrix]        
+Summarize dataset:  29%|##9       | 12/41 [00:00&lt;00:00, 74.43it/s, scatter Assets, Assets]
+Summarize dataset:  32%|###1      | 13/41 [00:00&lt;00:00, 74.43it/s, scatter Expense Ratio, Assets]
+Summarize dataset:  34%|###4      | 14/41 [00:00&lt;00:00, 74.43it/s, scatter Return 2009, Assets]  
+Summarize dataset:  37%|###6      | 15/41 [00:00&lt;00:00, 74.43it/s, scatter 3-Year Return, Assets]
+Summarize dataset:  39%|###9      | 16/41 [00:00&lt;00:00, 74.43it/s, scatter 5-Year Return, Assets]
+Summarize dataset:  41%|####1     | 17/41 [00:00&lt;00:00, 74.43it/s, scatter Assets, Expense Ratio]
+Summarize dataset:  44%|####3     | 18/41 [00:00&lt;00:00, 74.43it/s, scatter Expense Ratio, Expense Ratio]
+Summarize dataset:  46%|####6     | 19/41 [00:00&lt;00:00, 74.43it/s, scatter Return 2009, Expense Ratio]  
+Summarize dataset:  49%|####8     | 20/41 [00:00&lt;00:00, 28.38it/s, scatter Return 2009, Expense Ratio]
+Summarize dataset:  49%|####8     | 20/41 [00:00&lt;00:00, 28.38it/s, scatter 3-Year Return, Expense Ratio]
+Summarize dataset:  51%|#####1    | 21/41 [00:00&lt;00:00, 28.38it/s, scatter 5-Year Return, Expense Ratio]
+Summarize dataset:  54%|#####3    | 22/41 [00:00&lt;00:00, 28.38it/s, scatter Assets, Return 2009]         
+Summarize dataset:  56%|#####6    | 23/41 [00:00&lt;00:00, 28.38it/s, scatter Expense Ratio, Return 2009]
+Summarize dataset:  59%|#####8    | 24/41 [00:00&lt;00:00, 28.38it/s, scatter Return 2009, Return 2009]  
+Summarize dataset:  61%|######    | 25/41 [00:00&lt;00:00, 23.86it/s, scatter Return 2009, Return 2009]
+Summarize dataset:  61%|######    | 25/41 [00:00&lt;00:00, 23.86it/s, scatter 3-Year Return, Return 2009]
+Summarize dataset:  63%|######3   | 26/41 [00:00&lt;00:00, 23.86it/s, scatter 5-Year Return, Return 2009]
+Summarize dataset:  66%|######5   | 27/41 [00:01&lt;00:00, 23.86it/s, scatter Assets, 3-Year Return]     
+Summarize dataset:  68%|######8   | 28/41 [00:01&lt;00:00, 23.86it/s, scatter Expense Ratio, 3-Year Return]
+Summarize dataset:  71%|#######   | 29/41 [00:01&lt;00:00, 22.37it/s, scatter Expense Ratio, 3-Year Return]
+Summarize dataset:  71%|#######   | 29/41 [00:01&lt;00:00, 22.37it/s, scatter Return 2009, 3-Year Return]  
+Summarize dataset:  73%|#######3  | 30/41 [00:01&lt;00:00, 22.37it/s, scatter 3-Year Return, 3-Year Return]
+Summarize dataset:  76%|#######5  | 31/41 [00:01&lt;00:00, 22.37it/s, scatter 5-Year Return, 3-Year Return]
+Summarize dataset:  78%|#######8  | 32/41 [00:01&lt;00:00, 21.93it/s, scatter 5-Year Return, 3-Year Return]
+Summarize dataset:  78%|#######8  | 32/41 [00:01&lt;00:00, 21.93it/s, scatter Assets, 5-Year Return]       
+Summarize dataset:  80%|########  | 33/41 [00:01&lt;00:00, 21.93it/s, scatter Expense Ratio, 5-Year Return]
+Summarize dataset:  83%|########2 | 34/41 [00:01&lt;00:00, 21.93it/s, scatter Return 2009, 5-Year Return]  
+Summarize dataset:  85%|########5 | 35/41 [00:01&lt;00:00, 20.80it/s, scatter Return 2009, 5-Year Return]
+Summarize dataset:  85%|########5 | 35/41 [00:01&lt;00:00, 20.80it/s, scatter 3-Year Return, 5-Year Return]
+Summarize dataset:  88%|########7 | 36/41 [00:01&lt;00:00, 20.80it/s, scatter 5-Year Return, 5-Year Return]
+Summarize dataset:  86%|########6 | 37/43 [00:01&lt;00:00, 20.80it/s, Missing diagram bar]                 
+Summarize dataset:  88%|########8 | 38/43 [00:01&lt;00:00, 17.68it/s, Missing diagram bar]
+Summarize dataset:  88%|########8 | 38/43 [00:01&lt;00:00, 17.68it/s, Missing diagram matrix]
+Summarize dataset:  91%|######### | 39/43 [00:01&lt;00:00, 17.68it/s, Take sample]           
+Summarize dataset:  93%|#########3| 40/43 [00:01&lt;00:00, 17.68it/s, Detecting duplicates]
+Summarize dataset:  95%|#########5| 41/43 [00:01&lt;00:00, 17.68it/s, Get alerts]          
+Summarize dataset:  98%|#########7| 42/43 [00:01&lt;00:00, 17.68it/s, Get reproduction details]
+Summarize dataset: 100%|##########| 43/43 [00:01&lt;00:00, 17.68it/s, Completed]               
+Summarize dataset: 100%|##########| 43/43 [00:01&lt;00:00, 24.76it/s, Completed]
 
 Generate report structure:   0%|          | 0/1 [00:00&lt;?, ?it/s]
-Generate report structure: 100%|##########| 1/1 [00:01&lt;00:00,  1.58s/it]
-Generate report structure: 100%|##########| 1/1 [00:01&lt;00:00,  1.58s/it]
+Generate report structure: 100%|##########| 1/1 [00:01&lt;00:00,  1.62s/it]
+Generate report structure: 100%|##########| 1/1 [00:01&lt;00:00,  1.62s/it]
 
 Render HTML:   0%|          | 0/1 [00:00&lt;?, ?it/s]
-Render HTML: 100%|##########| 1/1 [00:00&lt;00:00,  6.37it/s]
-Render HTML: 100%|##########| 1/1 [00:00&lt;00:00,  6.37it/s]
+Render HTML: 100%|##########| 1/1 [00:00&lt;00:00,  6.26it/s]
+Render HTML: 100%|##########| 1/1 [00:00&lt;00:00,  6.25it/s]
 
 Export report to file:   0%|          | 0/1 [00:00&lt;?, ?it/s]
-Export report to file: 100%|##########| 1/1 [00:00&lt;00:00, 411.81it/s]</code></pre>
+Export report to file: 100%|##########| 1/1 [00:00&lt;00:00, 415.40it/s]</code></pre>
 </div>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><span class="co" style="color: #5E5E5E;
 background-color: null;

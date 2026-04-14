@@ -8,6 +8,8 @@ format:
     image: image.png
 ---
 
+tldr; qwen and I implement SweetViz EDA tools in python.
+
 ![](image.png)
 
 I have been using `qwen-3.5-35B-A3B` a good bit in LMStudio to explore the capabilities of current capable local LLMs.  In this post, I recount a conversation with the local installation of qwen about SweetViz, a python package for exploratory data visualization.

@@ -6,9 +6,14 @@ format:
   html:
     toc: true
     html-math-method: katex
+    image: image.png
 ---
 
-I have been using `qwen-3.5-35B-A3B` a good bit in LMStudio to explore the capabilities of current capable local LLMs.  In this post, I recount a conversation with the local installation of qwen about YDataProfiling, a python package for exploratory data analysis.
+tldr; qwen gets the assist on implementing ydata-profiling
+
+![](image.png)
+
+I have been using `qwen-3.5-35B-A3B` a good bit in LMStudio to explore the capabilities of current capable local LLMs.  I ask qwen about YDataProfiling, a python package for exploratory data analysis.
 
 # System Instruction
 
