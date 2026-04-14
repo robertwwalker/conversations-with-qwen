@@ -365,6 +365,6 @@ REQUIREMENTS:
 
 ## Summary: The Agentic EDA Tool Vision
 
-The optimal agentic EDA tool represents a **paradigm shift** from passive tools to active analytical collaborators. It must combine the comprehensive statistical rigor of R packages like DataExplorer and SmartEDA with the scalability and comparison capabilities of Python tools like [YData Profiling](./YDataProfiling.html) and [SweetViz](./SweetViz.html), while adding true autonomous reasoning and goal-directed behavior that distinguishes agentic AI from traditional automation.
+The optimal agentic EDA tool represents a **paradigm shift** from passive tools to active analytical collaborators. It must combine the comprehensive statistical rigor of R packages like DataExplorer and SmartEDA with the scalability and comparison capabilities of Python tools like [YData Profiling](https://robertwwalker.github.io/conversations-with-qwen/posts/YData/) and [SweetViz](https://robertwwalker.github.io/conversations-with-qwen/posts/SweetViz/), while adding true autonomous reasoning and goal-directed behavior that distinguishes agentic AI from traditional automation.
 
 The key differentiator is **autonomy across multiple reasoning steps**—the agent doesn't just run a fixed sequence of analyses but observes data characteristics, plans appropriate investigations, executes them, evaluates results, and iterates until substantive findings emerge. This transforms EDA from a manual chore into an intelligent partnership with the analyst.
