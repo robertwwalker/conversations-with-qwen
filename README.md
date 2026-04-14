@@ -7,3 +7,5 @@ A series of conversations with qwen.
 [Spec'ing an EDA tool](./EDA-tool-specs.html)
 
 [YDataProfiling](./YDataProfiling.html)
+
+[YDataProfiling](./SweetViz.html)
