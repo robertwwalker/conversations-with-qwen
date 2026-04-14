@@ -184,3 +184,6 @@ The HTML report will provide:
 4. Distribution plots for numeric variables   
 5. Value counts for categorical variables   
 6. Data quality warnings   
+
+The full conversation including the thinking steps is here.   
+![Conversation in pdf form](img/ydata.pdf){width=100% height=800px}

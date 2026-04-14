@@ -71,3 +71,7 @@ Two outputs:
 
 * [Analysis](img/bond_funds_analysis.html)   
 * [Fees Analysis](img/bond_funds_fees_analysis.html)
+
+The full pdf of the conversation is here.
+
+![Conversation in pdf form](img/SweetViz.pdf){width=100% height=800px}
