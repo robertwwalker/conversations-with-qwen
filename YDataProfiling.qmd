@@ -150,7 +150,7 @@ for col in categorical_cols[:3]:
 
 | File | Purpose |
 |------|---------|
-| [`bond_funds_report.html`](./bond_funds_report.html) | Interactive HTML report with visualizations |
+| [`bond_funds_report.html`](https://robertwwalker.github.io/conversations-with-qwen/bond_funds_report.html) | Interactive HTML report with visualizations |
 | `bond_funds_metrics.json` | Machine-readable metrics for programmatic access |
 
 
