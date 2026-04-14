@@ -154,7 +154,7 @@ for col in categorical_cols[:3]:
 
 
 ```{=html}
-<iframe width="60%" height="50%" src="https://robertwwalker.github.io/conversations-with-qwen/YData/img/bond_funds_report.html" title="Report"></iframe>
+<iframe width="60%" height="50%" src="https://robertwwalker.github.io/conversations-with-qwen/posts/YData/img/bond_funds_report.html" title="Report"></iframe>
 ```
 
 ---

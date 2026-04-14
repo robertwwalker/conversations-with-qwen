@@ -20,6 +20,7 @@
 
 
 
+<p><img src="https://robertwwalker.github.io/conversations-with-qwen/posts/SweetViz/image.png" class="img-fluid"></p>
 <p>I have been using <code>qwen-3.5-35B-A3B</code> a good bit in LMStudio to explore the capabilities of current capable local LLMs. In this post, I recount a conversation with the local installation of qwen about SweetViz, a python package for exploratory data visualization.</p>
 <section id="system-instruction" class="level1">
 <h1>System Instruction</h1>
@@ -186,9 +187,13 @@ Done! Use 'show' commands to display/save.   |██████████| [1
 </div>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1">bond_report.show_html(<span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"bond_funds_analysis.html"</span>)</span></code></pre></div></div>
+font-style: inherit;">"./img/bond_funds_analysis.html"</span>, open_browser<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">False</span>)</span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>Report bond_funds_analysis.html was generated! NOTEBOOK/COLAB USERS: the web browser MAY not pop up, regardless, the report IS saved in your notebook/colab files.</code></pre>
+<pre><code>Report ./img/bond_funds_analysis.html was generated.</code></pre>
 </div>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
@@ -229,9 +234,13 @@ Done! Use 'show' commands to display/save.   |██████████| [1
 </div>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1">risk_report.show_html(<span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"bond_funds_fees_analysis.html"</span>)</span></code></pre></div></div>
+font-style: inherit;">"./img/bond_funds_fees_analysis.html"</span>, open_browser<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">False</span>)</span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>Report bond_funds_fees_analysis.html was generated! NOTEBOOK/COLAB USERS: the web browser MAY not pop up, regardless, the report IS saved in your notebook/colab files.</code></pre>
+<pre><code>Report ./img/bond_funds_fees_analysis.html was generated.</code></pre>
 </div>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"></span>
 <span id="cb18-2"><span class="co" style="color: #5E5E5E;
@@ -252,9 +261,9 @@ font-style: inherit;"># - Categorical frequency distributions</span></span></cod
 </div>
 <p>Two outputs:</p>
 <ul>
-<li><a href="./bond_funds_analysis.html">Analysis</a><br>
+<li><a href="./img/bond_funds_analysis.html">Analysis</a><br>
 </li>
-<li><a href="./bond_funds_fees_analysis.html">Fees Analysis</a></li>
+<li><a href="./img/bond_funds_fees_analysis.html">Fees Analysis</a></li>
 </ul>
 
 
