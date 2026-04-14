@@ -1,0 +1,12 @@
+---
+title: "Welcome To Conversations with qwen"
+author: "Robert W. Walker"
+date: "2026-04-12"
+categories: [news]
+---
+
+This is the first post in `conversations with qwen 3.5`. Welcome!
+
+![](thumbnail.jpg)
+
+`qwen 3.5` is a series of large language models with open weights made available by Alibaba.  I have used them off and on for a short while though with tools they are remarkably powerful.  In this mini-blog, I explore a variety of topics with qwen.

@@ -1,0 +1,17 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  description: "Conversations with qwen 3.5"
+  site-url: https://robertwwalker.github.io/conversations-with-qwen/ # you must change this appropriately for RSS feeds to work properly
+  title: "qwen conversations"
+  navbar:
+    right:
+      - icon: github
+        href: https://github.com/robertwwalker/conversations-with-qwen
+      - icon: twitter
+        href: https://twitter.com
+format:
+  html:
+    theme: morph
