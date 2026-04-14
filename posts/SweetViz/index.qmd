@@ -51,11 +51,11 @@ print(df.head())
 
 # Generate full EDA report (target variable analysis not specified)
 bond_report = sv.analyze(df)
-bond_report.show_html("./img/bond_funds_analysis.html", open_browser=False)
+bond_report.show_html("img/bond_funds_analysis.html", open_browser=False)
 
 # Alternative: Analyze with Fees as target variable
 risk_report = sv.analyze(df, target_feat = "Fees")
-risk_report.show_html("./img/bond_funds_fees_analysis.html", open_browser=False)
+risk_report.show_html("img/bond_funds_fees_analysis.html", open_browser=False)
 
 # Summary statistics from SweetViz report will include:
 # - Distribution plots for each column
@@ -67,5 +67,5 @@ risk_report.show_html("./img/bond_funds_fees_analysis.html", open_browser=False)
 
 Two outputs:
 
-* [Analysis](./img/bond_funds_analysis.html)   
-* [Fees Analysis](./img/bond_funds_fees_analysis.html)
+* [Analysis](img/bond_funds_analysis.html)   
+* [Fees Analysis](img/bond_funds_fees_analysis.html)
