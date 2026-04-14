@@ -2,6 +2,8 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/system-role-gemini/index.html",
+      "/posts/system-role/index.html",
       "/posts/SweetViz/index.html",
       "/posts/YData/index.html",
       "/posts/EDA/index.html",

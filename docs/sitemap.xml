@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://robertwwalker.github.io/conversations-with-qwen/posts/qwen-who/index.html</loc>
-    <lastmod>2026-04-14T02:50:25.264Z</lastmod>
+    <loc>https://robertwwalker.github.io/conversations-with-qwen/posts/system-role/index.html</loc>
+    <lastmod>2026-04-14T17:13:47.662Z</lastmod>
   </url>
   <url>
-    <loc>https://robertwwalker.github.io/conversations-with-qwen/posts/YData/index.html</loc>
-    <lastmod>2026-04-14T03:55:13.017Z</lastmod>
+    <loc>https://robertwwalker.github.io/conversations-with-qwen/posts/EDA/index.html</loc>
+    <lastmod>2026-04-14T03:57:57.576Z</lastmod>
+  </url>
+  <url>
+    <loc>https://robertwwalker.github.io/conversations-with-qwen/posts/system-role-gemini/index.html</loc>
+    <lastmod>2026-04-14T17:22:27.544Z</lastmod>
   </url>
   <url>
     <loc>https://robertwwalker.github.io/conversations-with-qwen/posts/welcome/index.html</loc>
@@ -21,7 +25,11 @@
     <lastmod>2026-04-14T03:53:44.306Z</lastmod>
   </url>
   <url>
-    <loc>https://robertwwalker.github.io/conversations-with-qwen/posts/EDA/index.html</loc>
-    <lastmod>2026-04-14T03:57:57.576Z</lastmod>
+    <loc>https://robertwwalker.github.io/conversations-with-qwen/posts/YData/index.html</loc>
+    <lastmod>2026-04-14T03:55:13.017Z</lastmod>
+  </url>
+  <url>
+    <loc>https://robertwwalker.github.io/conversations-with-qwen/posts/qwen-who/index.html</loc>
+    <lastmod>2026-04-14T02:50:25.264Z</lastmod>
   </url>
 </urlset>
