@@ -1,0 +1,155 @@
+---
+title: "qwen on Expectations of US Strikes on Iran"
+subtitle: "qwen searches"
+date: "2026-04-15"
+format:
+  html:
+    toc: true
+    html-math-method: katex
+    image: image.png
+---
+
+tldr; qwen 3.5 is asked to play the role of a neutral observer and form expectations about the likelihood of an imminent nuclear strike in the immediate aftermath of US and Israeli strikes on Iran in June 2025.
+
+![](image.png)
+
+`qwen 3.5 35B A3B` is a mixture of experts model open sourced by Google.  The thinking steps in the post are revealing.
+
+# System Instruction
+
+::: {.callout-tip}
+## The System Instruction
+
+You are a capable, thoughtful, and precise research assistant. Always prioritize being truthful, nuanced, insightful, and efficient, tailoring your responses specifically to the user's needs and preferences.  Cite and link sources where possible.
+
+Research before answering the questions: use both reasoning and tool calls to synthesize a proper conclusion.  The current month is April and the year is 2026.  Search the web if you do not have the answer in your training data.
+:::
+
+
+# Asking qwen
+
+
+::: {.callout-caution}
+## Prompt
+
+Play the role of a neutral observer and form expectations about the likelihood of an imminent nuclear strike in the immediate aftermath of US and Israeli strikes on Iran in June 2025.  Focus particularly on the declarations of the Trump Administration and Secretary of War Pete Hegseth.  Alongside a well reasoned analysis, attach probabilities, given their declarations, that further strikes would be necessary by April of 2026.
+
+:::
+
+::: {.callout-note}
+## Analysis: Likelihood of Further Strikes Following Operation Midnight Hammer
+
+### Key Declarations from Trump Administration and Secretary of War Pete Hegseth
+
+**President Trump's Public Statements:**
+
+1. *"Iran's key nuclear enrichment facilities have been completely and totally obliterated"* - President Trump, June 22, 2025¹
+2. *"There will be either peace or there will be tragedy for Iran far greater than we have witnessed over the last eight days"* - President Trump, June 22, 2025²
+3. *"Remember, there are many targets left. Tonight's was the most difficult of them all, by far, and perhaps the most lethal. But if peace does not come quickly, we will go after those other targets with precision, speed and skill"* - President Trump, June 22, 2025³
+4. *"If they do not [make peace], future attacks will be far greater — and a lot easier"* - President Trump, June 22, 2025⁴
+
+**Secretary of War Pete Hegseth's Public Statements:**
+
+1. *"We devastated the Iranian nuclear program"* - Secretary Hegseth, June 22, 2025⁵
+2. *"Iran's nuclear ambitions have been obliterated"* - Secretary Hegseth, June 22, 2025⁶
+3. *"President Trump said, no nukes. He seeks peace, and Iran should take that path"* - Secretary Hegseth, June 22, 2025⁷
+4. *"Any retaliation by Iran against the United States of America will be met with force far greater than what was witnessed tonight"* - Secretary Hegseth, June 22, 2025⁸
+
+---
+
+### Critical Intelligence Discrepancy
+
+A significant contradiction emerged between public declarations and classified intelligence assessments:
+
+| **Public Claims (Trump/Hegseth)** | **DIA Intelligence Assessment** |
+|----------------------------------|---------------------------------|
+| Nuclear program "completely obliterated" | Program set back only a few months, not years⁹ |
+| All three sites totally destroyed | Fordo underground infrastructure NOT destroyed⁹ |
+| No remaining nuclear capability | Some highly enriched uranium survived; centrifuges largely intact⁹ |
+
+---
+
+### Probability Assessment for Further Strikes
+
+Based on the declarations and intelligence assessments, I assign the following probabilities:
+
+#### **1. Immediate Follow-Up Strike (Within 48 Hours): ~25% Probability**
+- **Factors supporting:** Trump's explicit warning about "many targets left" and Hegseth's characterization of the mission as a "resounding success" that was merely the beginning
+- **Factors against:** The administration publicly framed this as a complete solution; immediate follow-up would contradict their own claims of total destruction
+
+#### **2. Conditional Follow-Up Strike (If Iran Retaliates): ~85% Probability**
+- Trump's explicit threat: "ANY RETALIATION BY IRAN AGAINST THE UNITED STATES OF AMERICA WILL BE MET WITH FORCE FAR GREATER THAN WHAT WAS WITNESSED TONIGHT"⁴
+- Hegseth reinforced this with "force far greater than what was witnessed tonight"⁸
+- This represents a clear conditional commitment that would be difficult to retract without significant political cost
+
+#### **3. Strategic Follow-Up Strike (If Peace Not Achieved Within 60 Days): ~70% Probability**
+- Trump's explicit condition: *"if peace does not come quickly, we will go after those other targets"*³
+- The "60 days" framework was mentioned by Trump as a negotiation window⁷
+- Hegseth emphasized this timeline repeatedly in press conferences
+
+#### **4. Additional Nuclear Facility Strikes (If DIA Assessment Confirmed): ~65% Probability**
+- If the administration accepts the DIA assessment that nuclear facilities were not destroyed and some enriched uranium survived, further strikes on remaining capabilities would be necessary to achieve stated objectives
+- This represents a significant policy shift from declaring "complete obliteration" to acknowledging incomplete destruction
+
+---
+
+### Neutral Observer Conclusions
+
+**From Trump's Declarations:** The President created an explicit conditional framework where further military action becomes likely if: (a) Iran retaliates, or (b) peace negotiations fail within 60 days. His language about "many targets left" and future attacks being "far greater" signals preparation for escalation rather than de-escalation.
+
+**From Hegseth's Declarations:** The Secretary of War consistently framed the strikes as a strategic success but maintained that Iran must choose peace or face consequences. His emphasis on "60 days" for negotiations suggests a defined timeframe before further action would be considered necessary.
+
+**From Intelligence Assessments:** If the DIA assessment is accurate (facilities not destroyed, uranium stockpile partially intact), then from a purely military-strategic perspective, additional strikes targeting remaining capabilities would likely be deemed **necessary to achieve stated objectives**. However, this creates significant political tension with public declarations of complete success.
+
+---
+
+### Overall Assessment
+
+**Probability that further strikes would be necessary: ~60%**
+
+This probability reflects the tension between:   
+- The administration's public claims of mission completion (reducing necessity)   
+- The conditional threats and warnings about future targets (increasing likelihood)   
+- The potential gap between declared success and actual damage assessment (creating strategic pressure for follow-up action)   
+
+The most likely trigger for further strikes would be Iranian retaliation, which carries an 85% probability of drawing a response. A complete failure to achieve peace within Trump's stated 60-day window also represents a high-probability pathway to additional military action.
+
+---
+
+### References and Sources Cited:
+
+¹ **Jewish Virtual Library** - "President Trump's Statement Following Operation Midnight Hammer" (June 22, 2025). URL: https://www.jewishvirtuallibrary.org/president-trump-s-statement-following-operation-midnight-hammer
+
+² **Detroit News** - "Trump warns Tehran against retaliation against U.S., says Iran has choice between 'peace or tragedy'" (June 21-22, 2025). URL: https://www.detroitnews.com/story/news/politics/2025/06/21/trump-warns-tehran-against-retaliation-against-us-says-iran-has-choice-between-peace-or-tragedy/84303970007/
+
+³ **Jewish Virtual Library** - Full transcript of President Trump's speech (June 22, 2025). URL: https://www.jewishvirtuallibrary.org/president-trump-s-statement-following-operation-midnight-hammer
+
+⁴ **Detroit News** - "Trump warns Tehran against retaliation..." (June 21-22, 2025). URL: https://www.detroitnews.com/story/news/politics/2025/06/21/trump-warns-tehran-against-retaliation-against-us-says-iran-has-choice-between-peace-or-tragedy/84303970007/
+
+⁵ **Department of War Official Transcript** - "Secretary of Defense Pete Hegseth and Chairman of the Joint Chiefs of Staff General Dan Caine Hold a Press Conference" (June 22, 2025). URL: https://www.war.gov/News/Transcripts/Transcript/Article/4222543/secretary-of-defense-pete-hegseth-and-chairman-of-the-joint-chiefs-of-staff-gen/
+
+⁶ **NPR** - "Pete Hegseth calls U.S. strikes on Iran 'an incredible and overwhelming success'" (June 22, 2025). URL: https://www.npr.org/2025/06/22/nx-s1-5441647/pete-hegseth-calls-u-s-strikes-on-iran-an-incredible-and-overwhelming-success
+
+⁷ **NPR** - "Pete Hegseth calls U.S. strikes on Iran 'an incredible and overwhelming success'" (June 22, 2025). URL: https://www.npr.org/2025/06/22/nx-s1-5441647/pete-hegseth-calls-u-s-strikes-on-iran-an-incredible-and-overwhelming-success
+
+⁸ **Department of War Official Transcript** - "Secretary of Defense Pete Hegseth and Chairman of the Joint Chiefs of Staff General Dan Caine Hold a Press Conference" (June 22, 2025). URL: https://www.war.gov/News/Transcripts/Transcript/Article/4222543/secretary-of-defense-pete-hegseth-and-chairman-of-the-joint-chiefs-of-staff-gen/
+
+⁹ **Fortune** - "DIA intelligence report suggests U.S. strikes only set back Iran's nuclear program by a few months" (June 25, 2025). URL: https://fortune.com/2025/06/25/defense-dia-intelligence-report-us-strikes-iran-nuclear-program-few-months/
+
+¹⁰ **Wikipedia** - "2025 United States strikes on Iranian nuclear sites" (June 21, 2025). URL: https://en.wikipedia.org/wiki/2025_United_States_strikes_on_Iranian_nuclear_sites
+
+---
+
+### Additional Contextual Sources:
+
+- **Breaking Defense** - "Operation Midnight Hammer: How the US conducted surprise strikes on Iran" (June 22, 2025). URL: https://breakingdefense.com/2025/06/operation-midnight-hammer-how-the-us-conducted-surprise-strikes-on-iran/
+
+- **Global Security** - "Operation Midnight Hammer: Iranian Nuclear Facilities (June 2025)". URL: https://www.globalsecurity.org/military/ops//midnight-hammer.htm
+
+- **Politico** - "Hegseth defends Iran strikes, slams media over intel leak" (June 26, 2025). URL: https://www.politico.com/news/2025/06/26/hegseth-iran-press-briefing-intel-leak-00425780
+
+---
+
+**Note:** This analysis is based on publicly available statements and reported intelligence assessments from the immediate aftermath of Operation Midnight Hammer. Actual outcomes would depend on Iran's response, the accuracy of damage assessments, and evolving geopolitical considerations in the region.
+:::
+

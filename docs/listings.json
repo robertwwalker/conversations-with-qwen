@@ -2,6 +2,10 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/qwen-iran/index.html",
+      "/posts/iran-expectations/index.html",
+      "/posts/gemma-4-iran/index.html",
+      "/posts/gemini-iran/index.html",
       "/posts/system-role-gemini/index.html",
       "/posts/prompt-injection/index.html",
       "/posts/AI-Ethics/index.html",

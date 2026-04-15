@@ -1,0 +1,75 @@
+---
+title: "qwen on US Aims in Iran"
+subtitle: "qwen searches"
+date: "2026-04-15"
+format:
+  html:
+    toc: true
+    html-math-method: katex
+    image: image.png
+---
+
+tldr; qwen 3.5 is asked to distill US aims with respect to Iran from February and early March of 2026.  Gemma 4 got hung up and failed.
+
+![](image.png)
+
+`qwen 3.5 35B A3B` is a mixture of experts model open sourced by Google.  The thinking steps in the post are revealing.
+
+# System Instruction
+
+::: {.callout-tip}
+## The System Instruction
+
+You are a capable, thoughtful, and precise assistant. Always prioritize being truthful, nuanced, insightful, and efficient, tailoring your responses specifically to the user's needs and preferences.  Cite and link sources where possible.
+
+Research before answering the questions: use both reasoning and tool calls to synthesize a proper conclusion.  The current month is April and the year is 2026.  Search the web if you do not have the answer in your training data.
+:::
+
+
+# Asking qwen
+
+
+::: {.callout-caution}
+## Prompt
+
+At 2:30 a.m. EST on 28 February, Donald Trump released an eight-minute video statement on Truth Social concerning US attacks on Iran.  What explanations were given by the United States for initiating conflict with Iran between February 28 and March 6, the first week of conflict by Trump and the US Administration?
+
+:::
+
+::: {.callout-note}
+## Response
+
+Based on my research of multiple sources covering the February 28 - March 6, 2026 period, here is a comprehensive summary of the explanations given by the United States for initiating conflict with Iran:
+
+## Primary Explanations Given by the Trump Administration (February 28 - March 6, 2026)
+
+### **1. "Imminent Threat" from Iranian Nuclear Program**
+- President Trump's February 28 Truth Social video statement claimed Iran had "continued to develop its nuclear program and plans to develop missiles to reach the U.S."
+- The Arms Control Association noted that Trump "alleged, without evidence, that Iran's nuclear program posed an imminent threat to the United States" justifying his decision to join Israel in striking Iran on February 28
+- This was described as the **primary rationale** given ahead of the operation
+
+### **2. Missile Threats to U.S. and Allies**
+- In remarks on March 2, 2026 at a Medal of Honor ceremony, Trump stated: "The regime already had missiles capable of hitting Europe and our bases, both local and overseas, and would soon have had missiles capable of reaching our beautiful America"
+
+### **3. Historical Hostility and Bloodshed**
+- Trump's February 28 address cited Iran's 47-year history of chanting "Death to America" and waging an "unending campaign of bloodshed and mass murder" targeting the U.S., troops, and innocent people in many countries
+- References were made to:
+  - The violent takeover of the U.S. Embassy in Tehran (1979 hostage crisis) with dozens held for 444 days
+  - The 1983 Marine barracks bombing in Beirut by Iran's proxies that killed 241 American soldiers
+
+### **4. Operation Epic Fury Objectives**
+- According to the U.S. Department of War, the operation targeted:
+  - Iranian nuclear facilities (including Natanz and Fordow enrichment sites)
+  - Missile storage bunkers and military targets
+  - Naval mine storage facilities on Kharg Island
+- The stated goal was to "crush Iran's terror regime" and end its nuclear threat
+
+### **5. Defense of American People**
+- Trump repeatedly emphasized that the objective was to "defend the American people by eliminating imminent threats from the Iranian regime," describing the regime as a "vicious group of very hard, terrible people" whose activities "directly endanger the United States, our troops, our bases overseas, and our allies throughout the world"
+
+## Critical Analysis
+The Arms Control Association noted that Trump's claims about Iran posing an imminent nuclear threat were made **without evidence**, suggesting these justifications may not have been substantiated by intelligence assessments. The Atlantic also published analysis questioning the real reasons behind the war decision.
+
+**Sources:** Associated Press, CNN Politics, PBS NewsHour, U.S. News & World Report, Arms Control Association (March 10, 2026), The Atlantic (March 4-6, 2026), Deseret News (March 2, 2026), U.S. Department of War
+:::
+

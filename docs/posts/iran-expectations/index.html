@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2026-04-15">
 
-<title>Conversations with qwen 3.5 and Gemma 4 – qwen 3.5/Gemma 4 conversations</title>
+<title>qwen on Expectations of US Strikes on Iran – qwen 3.5/Gemma 4 conversations</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,26 +24,24 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-011fc8c1d1c56fbd9c79556fa11d8c29.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-011fc8c1d1c56fbd9c79556fa11d8c29.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -70,67 +69,9 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-title','listing-author','listing-date','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="alternate" type="application/rss+xml" title="qwen 3.5/Gemma 4 conversations" href="index.xml" data-external="1"></head>
+</head>
 
 <body class="nav-fixed quarto-light">
 
@@ -139,9 +80,9 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
     </a>
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">qwen 3.5/Gemma 4 conversations</span>
     </a>
   </div>
@@ -171,341 +112,224 @@ window.Quarto = {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page-left">
-      <h1 class="title">Conversations with qwen 3.5 and Gemma 4</h1>
+    <div class="quarto-title column-body">
+      <h1 class="title">qwen on Expectations of US Strikes on Iran</h1>
+            <p class="subtitle lead">qwen searches</p>
                       </div>
   </div>
     
   
-  <div class="quarto-title-meta column-page-left">
+  <div class="quarto-title-meta">
 
       
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">April 15, 2026</p>
+      </div>
+    </div>
     
       
     </div>
     
   
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(13)</span></div><div class="category" data-category="bmV3cw==">news <span class="quarto-category-count">(1)</span></div></div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#system-instruction" id="toc-system-instruction" class="nav-link active" data-scroll-target="#system-instruction">System Instruction</a></li>
+  <li><a href="#asking-qwen" id="toc-asking-qwen" class="nav-link" data-scroll-target="#asking-qwen">Asking qwen</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
 
 
+<p>tldr; qwen 3.5 is asked to play the role of a neutral observer and form expectations about the likelihood of an imminent nuclear strike in the immediate aftermath of US and Israeli strikes on Iran in June 2025.</p>
+<p><img src="image.png" class="img-fluid"></p>
+<p><code>qwen 3.5 35B A3B</code> is a mixture of experts model open sourced by Google. The thinking steps in the post are revealing.</p>
+<section id="system-instruction" class="level1">
+<h1>System Instruction</h1>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>The System Instruction
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>You are a capable, thoughtful, and precise research assistant. Always prioritize being truthful, nuanced, insightful, and efficient, tailoring your responses specifically to the user’s needs and preferences. Cite and link sources where possible.</p>
+<p>Research before answering the questions: use both reasoning and tool calls to synthesize a proper conclusion. The current month is April and the year is 2026. Search the web if you do not have the answer in your training data.</p>
+</div>
+</div>
+</section>
+<section id="asking-qwen" class="level1">
+<h1>Asking qwen</h1>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Caution</span>Prompt
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Play the role of a neutral observer and form expectations about the likelihood of an imminent nuclear strike in the immediate aftermath of US and Israeli strikes on Iran in June 2025. Focus particularly on the declarations of the Trump Administration and Secretary of War Pete Hegseth. Alongside a well reasoned analysis, attach probabilities, given their declarations, that further strikes would be necessary by April of 2026.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Analysis: Likelihood of Further Strikes Following Operation Midnight Hammer
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<section id="key-declarations-from-trump-administration-and-secretary-of-war-pete-hegseth" class="level3">
+<h3 class="anchored" data-anchor-id="key-declarations-from-trump-administration-and-secretary-of-war-pete-hegseth">Key Declarations from Trump Administration and Secretary of War Pete Hegseth</h3>
+<p><strong>President Trump’s Public Statements:</strong></p>
+<ol type="1">
+<li><em>“Iran’s key nuclear enrichment facilities have been completely and totally obliterated”</em> - President Trump, June 22, 2025¹</li>
+<li><em>“There will be either peace or there will be tragedy for Iran far greater than we have witnessed over the last eight days”</em> - President Trump, June 22, 2025²</li>
+<li><em>“Remember, there are many targets left. Tonight’s was the most difficult of them all, by far, and perhaps the most lethal. But if peace does not come quickly, we will go after those other targets with precision, speed and skill”</em> - President Trump, June 22, 2025³</li>
+<li><em>“If they do not [make peace], future attacks will be far greater — and a lot easier”</em> - President Trump, June 22, 2025⁴</li>
+</ol>
+<p><strong>Secretary of War Pete Hegseth’s Public Statements:</strong></p>
+<ol type="1">
+<li><em>“We devastated the Iranian nuclear program”</em> - Secretary Hegseth, June 22, 2025⁵</li>
+<li><em>“Iran’s nuclear ambitions have been obliterated”</em> - Secretary Hegseth, June 22, 2025⁶</li>
+<li><em>“President Trump said, no nukes. He seeks peace, and Iran should take that path”</em> - Secretary Hegseth, June 22, 2025⁷</li>
+<li><em>“Any retaliation by Iran against the United States of America will be met with force far greater than what was witnessed tonight”</em> - Secretary Hegseth, June 22, 2025⁸</li>
+</ol>
+<hr>
+</section>
+<section id="critical-intelligence-discrepancy" class="level3">
+<h3 class="anchored" data-anchor-id="critical-intelligence-discrepancy">Critical Intelligence Discrepancy</h3>
+<p>A significant contradiction emerged between public declarations and classified intelligence assessments:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 49%">
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Public Claims (Trump/Hegseth)</strong></th>
+<th><strong>DIA Intelligence Assessment</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Nuclear program “completely obliterated”</td>
+<td>Program set back only a few months, not years⁹</td>
+</tr>
+<tr class="even">
+<td>All three sites totally destroyed</td>
+<td>Fordo underground infrastructure NOT destroyed⁹</td>
+</tr>
+<tr class="odd">
+<td>No remaining nuclear capability</td>
+<td>Some highly enriched uranium survived; centrifuges largely intact⁹</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="probability-assessment-for-further-strikes" class="level3">
+<h3 class="anchored" data-anchor-id="probability-assessment-for-further-strikes">Probability Assessment for Further Strikes</h3>
+<p>Based on the declarations and intelligence assessments, I assign the following probabilities:</p>
+<section id="immediate-follow-up-strike-within-48-hours-25-probability" class="level4">
+<h4 class="anchored" data-anchor-id="immediate-follow-up-strike-within-48-hours-25-probability"><strong>1. Immediate Follow-Up Strike (Within 48 Hours): ~25% Probability</strong></h4>
+<ul>
+<li><strong>Factors supporting:</strong> Trump’s explicit warning about “many targets left” and Hegseth’s characterization of the mission as a “resounding success” that was merely the beginning</li>
+<li><strong>Factors against:</strong> The administration publicly framed this as a complete solution; immediate follow-up would contradict their own claims of total destruction</li>
+</ul>
+</section>
+<section id="conditional-follow-up-strike-if-iran-retaliates-85-probability" class="level4">
+<h4 class="anchored" data-anchor-id="conditional-follow-up-strike-if-iran-retaliates-85-probability"><strong>2. Conditional Follow-Up Strike (If Iran Retaliates): ~85% Probability</strong></h4>
+<ul>
+<li>Trump’s explicit threat: “ANY RETALIATION BY IRAN AGAINST THE UNITED STATES OF AMERICA WILL BE MET WITH FORCE FAR GREATER THAN WHAT WAS WITNESSED TONIGHT”⁴</li>
+<li>Hegseth reinforced this with “force far greater than what was witnessed tonight”⁸</li>
+<li>This represents a clear conditional commitment that would be difficult to retract without significant political cost</li>
+</ul>
+</section>
+<section id="strategic-follow-up-strike-if-peace-not-achieved-within-60-days-70-probability" class="level4">
+<h4 class="anchored" data-anchor-id="strategic-follow-up-strike-if-peace-not-achieved-within-60-days-70-probability"><strong>3. Strategic Follow-Up Strike (If Peace Not Achieved Within 60 Days): ~70% Probability</strong></h4>
+<ul>
+<li>Trump’s explicit condition: <em>“if peace does not come quickly, we will go after those other targets”</em>³</li>
+<li>The “60 days” framework was mentioned by Trump as a negotiation window⁷</li>
+<li>Hegseth emphasized this timeline repeatedly in press conferences</li>
+</ul>
+</section>
+<section id="additional-nuclear-facility-strikes-if-dia-assessment-confirmed-65-probability" class="level4">
+<h4 class="anchored" data-anchor-id="additional-nuclear-facility-strikes-if-dia-assessment-confirmed-65-probability"><strong>4. Additional Nuclear Facility Strikes (If DIA Assessment Confirmed): ~65% Probability</strong></h4>
+<ul>
+<li>If the administration accepts the DIA assessment that nuclear facilities were not destroyed and some enriched uranium survived, further strikes on remaining capabilities would be necessary to achieve stated objectives</li>
+<li>This represents a significant policy shift from declaring “complete obliteration” to acknowledging incomplete destruction</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="neutral-observer-conclusions" class="level3">
+<h3 class="anchored" data-anchor-id="neutral-observer-conclusions">Neutral Observer Conclusions</h3>
+<p><strong>From Trump’s Declarations:</strong> The President created an explicit conditional framework where further military action becomes likely if: (a) Iran retaliates, or (b) peace negotiations fail within 60 days. His language about “many targets left” and future attacks being “far greater” signals preparation for escalation rather than de-escalation.</p>
+<p><strong>From Hegseth’s Declarations:</strong> The Secretary of War consistently framed the strikes as a strategic success but maintained that Iran must choose peace or face consequences. His emphasis on “60 days” for negotiations suggests a defined timeframe before further action would be considered necessary.</p>
+<p><strong>From Intelligence Assessments:</strong> If the DIA assessment is accurate (facilities not destroyed, uranium stockpile partially intact), then from a purely military-strategic perspective, additional strikes targeting remaining capabilities would likely be deemed <strong>necessary to achieve stated objectives</strong>. However, this creates significant political tension with public declarations of complete success.</p>
+<hr>
+</section>
+<section id="overall-assessment" class="level3">
+<h3 class="anchored" data-anchor-id="overall-assessment">Overall Assessment</h3>
+<p><strong>Probability that further strikes would be necessary: ~60%</strong></p>
+<p>This probability reflects the tension between:<br>
+- The administration’s public claims of mission completion (reducing necessity)<br>
+- The conditional threats and warnings about future targets (increasing likelihood)<br>
+- The potential gap between declared success and actual damage assessment (creating strategic pressure for follow-up action)</p>
+<p>The most likely trigger for further strikes would be Iranian retaliation, which carries an 85% probability of drawing a response. A complete failure to achieve peace within Trump’s stated 60-day window also represents a high-probability pathway to additional military action.</p>
+<hr>
+</section>
+<section id="references-and-sources-cited" class="level3">
+<h3 class="anchored" data-anchor-id="references-and-sources-cited">References and Sources Cited:</h3>
+<p>¹ <strong>Jewish Virtual Library</strong> - “President Trump’s Statement Following Operation Midnight Hammer” (June 22, 2025). URL: https://www.jewishvirtuallibrary.org/president-trump-s-statement-following-operation-midnight-hammer</p>
+<p>² <strong>Detroit News</strong> - “Trump warns Tehran against retaliation against U.S., says Iran has choice between ‘peace or tragedy’” (June 21-22, 2025). URL: https://www.detroitnews.com/story/news/politics/2025/06/21/trump-warns-tehran-against-retaliation-against-us-says-iran-has-choice-between-peace-or-tragedy/84303970007/</p>
+<p>³ <strong>Jewish Virtual Library</strong> - Full transcript of President Trump’s speech (June 22, 2025). URL: https://www.jewishvirtuallibrary.org/president-trump-s-statement-following-operation-midnight-hammer</p>
+<p>⁴ <strong>Detroit News</strong> - “Trump warns Tehran against retaliation…” (June 21-22, 2025). URL: https://www.detroitnews.com/story/news/politics/2025/06/21/trump-warns-tehran-against-retaliation-against-us-says-iran-has-choice-between-peace-or-tragedy/84303970007/</p>
+<p>⁵ <strong>Department of War Official Transcript</strong> - “Secretary of Defense Pete Hegseth and Chairman of the Joint Chiefs of Staff General Dan Caine Hold a Press Conference” (June 22, 2025). URL: https://www.war.gov/News/Transcripts/Transcript/Article/4222543/secretary-of-defense-pete-hegseth-and-chairman-of-the-joint-chiefs-of-staff-gen/</p>
+<p>⁶ <strong>NPR</strong> - “Pete Hegseth calls U.S. strikes on Iran ‘an incredible and overwhelming success’” (June 22, 2025). URL: https://www.npr.org/2025/06/22/nx-s1-5441647/pete-hegseth-calls-u-s-strikes-on-iran-an-incredible-and-overwhelming-success</p>
+<p>⁷ <strong>NPR</strong> - “Pete Hegseth calls U.S. strikes on Iran ‘an incredible and overwhelming success’” (June 22, 2025). URL: https://www.npr.org/2025/06/22/nx-s1-5441647/pete-hegseth-calls-u-s-strikes-on-iran-an-incredible-and-overwhelming-success</p>
+<p>⁸ <strong>Department of War Official Transcript</strong> - “Secretary of Defense Pete Hegseth and Chairman of the Joint Chiefs of Staff General Dan Caine Hold a Press Conference” (June 22, 2025). URL: https://www.war.gov/News/Transcripts/Transcript/Article/4222543/secretary-of-defense-pete-hegseth-and-chairman-of-the-joint-chiefs-of-staff-gen/</p>
+<p>⁹ <strong>Fortune</strong> - “DIA intelligence report suggests U.S. strikes only set back Iran’s nuclear program by a few months” (June 25, 2025). URL: https://fortune.com/2025/06/25/defense-dia-intelligence-report-us-strikes-iran-nuclear-program-few-months/</p>
+<p>¹⁰ <strong>Wikipedia</strong> - “2025 United States strikes on Iranian nuclear sites” (June 21, 2025). URL: https://en.wikipedia.org/wiki/2025_United_States_strikes_on_Iranian_nuclear_sites</p>
+<hr>
+</section>
+<section id="additional-contextual-sources" class="level3">
+<h3 class="anchored" data-anchor-id="additional-contextual-sources">Additional Contextual Sources:</h3>
+<ul>
+<li><p><strong>Breaking Defense</strong> - “Operation Midnight Hammer: How the US conducted surprise strikes on Iran” (June 22, 2025). URL: https://breakingdefense.com/2025/06/operation-midnight-hammer-how-the-us-conducted-surprise-strikes-on-iran/</p></li>
+<li><p><strong>Global Security</strong> - “Operation Midnight Hammer: Iranian Nuclear Facilities (June 2025)”. URL: https://www.globalsecurity.org/military/ops//midnight-hammer.htm</p></li>
+<li><p><strong>Politico</strong> - “Hegseth defends Iran strikes, slams media over intel leak” (June 26, 2025). URL: https://www.politico.com/news/2025/06/26/hegseth-iran-press-briefing-intel-leak-00425780</p></li>
+</ul>
+<hr>
+<p><strong>Note:</strong> This analysis is based on publicly available statements and reported intelligence assessments from the immediate aftermath of Operation Midnight Hammer. Actual outcomes would depend on Iran’s response, the accuracy of damage assessments, and evolving geopolitical considerations in the region.</p>
+</section>
+</div>
+</div>
 
 
+</section>
 
-
-<div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
-<div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-listing-date-sort="1776236400000" data-listing-file-modified-sort="1776279718214" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="622">
-<a href="./posts/qwen-iran/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top"><img src="posts/qwen-iran/image.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-qwen on US Aims in Iran
-</h5>
-<div class="card-text listing-description delink">
-tldr; qwen 3.5 is asked to distill US aims with respect to Iran from February and early March of 2026. Gemma 4 got hung up and failed.
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-
-</div>
-<div class="listing-date">
-Apr 15, 2026
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="1" data-listing-date-sort="1776236400000" data-listing-file-modified-sort="1776283987015" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1262">
-<a href="./posts/iran-expectations/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top"><img src="posts/iran-expectations/image.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-qwen on Expectations of US Strikes on Iran
-</h5>
-<div class="card-text listing-description delink">
-tldr; qwen 3.5 is asked to play the role of a neutral observer and form expectations about the likelihood of an imminent nuclear strike in the immediate aftermath of US and…
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-
-</div>
-<div class="listing-date">
-Apr 15, 2026
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="2" data-listing-date-sort="1776236400000" data-listing-file-modified-sort="1776277669300" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="709">
-<a href="./posts/gemma-4-iran/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top"><img src="posts/gemma-4-iran/image.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Gemma 4 on US Aims in Iran
-</h5>
-<div class="card-text listing-description delink">
-tldr; Gemma 4 is asked to distill US aims with respect to Iran from February and early March of 2026.
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-
-</div>
-<div class="listing-date">
-Apr 15, 2026
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="3" data-listing-date-sort="1776236400000" data-listing-file-modified-sort="1776283457514" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="841">
-<a href="./posts/gemini-iran/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top"><img src="posts/gemini-iran/imageGemini.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Gemini on Expectations of US Strikes on Iran
-</h5>
-<div class="card-text listing-description delink">
-tldr; Gemini is asked to play the role of a neutral observer and form expectations about the likelihood of an imminent nuclear strike in the immediate aftermath of US and…
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-
-</div>
-<div class="listing-date">
-Apr 15, 2026
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="4" data-listing-date-sort="1776150000000" data-listing-file-modified-sort="1776191228433" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="740">
-<a href="./posts/system-role-gemini/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="./posts/system-role-gemini/img/Gemini.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-What is the system role? [Gemini]
-</h5>
-<div class="card-text listing-description delink">
-<code>Gemini thinking</code> answers <code>What is the system role</code>?
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Robert W. Walker
-</div>
-<div class="listing-date">
-Apr 14, 2026
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="5" data-listing-date-sort="1776150000000" data-listing-file-modified-sort="1776191329067" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="933">
-<a href="./posts/prompt-injection/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="./posts/prompt-injection/img/SystemRole.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-What is prompt injection?
-</h5>
-<div class="card-text listing-description delink">
-<code>qwen 3.5</code> on <code>prompt injection</code>?
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Robert W. Walker
-</div>
-<div class="listing-date">
-Apr 14, 2026
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="6" data-listing-date-sort="1776150000000" data-listing-file-modified-sort="1776191276777" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="831">
-<a href="./posts/AI-Ethics/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="./posts/AI-Ethics/img/SystemRole.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-AI Ethical Challenges
-</h5>
-<div class="card-text listing-description delink">
-<code>qwen 3.5</code> on <code>AI and ethics</code>?
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Robert W. Walker
-</div>
-<div class="listing-date">
-Apr 14, 2026
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="7" data-listing-date-sort="1776150000000" data-listing-file-modified-sort="1776191192953" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="21" data-listing-word-count-sort="4053">
-<a href="./posts/system-role/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="./posts/system-role/img/SystemRole.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-What is the system role?
-</h5>
-<div class="card-text listing-description delink">
-<code>qwen 3.5</code> answers <code>What is the system role</code>?
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Robert W. Walker
-</div>
-<div class="listing-date">
-Apr 14, 2026
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="8" data-listing-date-sort="1776063600000" data-listing-file-modified-sort="1776138824306" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="241">
-<a href="./posts/SweetViz/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top"><img src="posts/SweetViz/image.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-SweetViz
-</h5>
-<div class="card-text listing-description delink">
-tldr; qwen and I implement SweetViz EDA tools in python.
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-
-</div>
-<div class="listing-date">
-Apr 13, 2026
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="9" data-listing-date-sort="1776063600000" data-listing-file-modified-sort="1776191145277" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="693">
-<a href="./posts/YData/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top"><img src="posts/YData/image.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-YDataProfiling
-</h5>
-<div class="card-text listing-description delink">
-tldr; qwen gets the assist on implementing ydata-profiling
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-
-</div>
-<div class="listing-date">
-Apr 13, 2026
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="10" data-listing-date-sort="1776063600000" data-listing-file-modified-sort="1776190753068" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="12" data-listing-word-count-sort="2218">
-<a href="./posts/EDA/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Providing Specs for an Agentic EDA
-</h5>
-<div class="card-text listing-description delink">
-<code>qwen</code> and I carry out the construction and project plan for an agentic EDA. Using web search and related tools, <code>qwen</code> surveys packages for R and python, distills capabilities…
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-
-</div>
-<div class="listing-date">
-Apr 13, 2026
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="11" data-listing-date-sort="1776063600000" data-listing-file-modified-sort="1776191103123" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="12" data-listing-word-count-sort="2333">
-<a href="./posts/qwen-who/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Who are you?
-</h5>
-<div class="card-text listing-description delink">
-I have been using <code>qwen-3.5-35B-A3B</code> a good bit in LMStudio to explore the capabilities of current capable local LLMs. I ask <code>qwen</code> what it is.
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-
-</div>
-<div class="listing-date">
-Apr 13, 2026
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="12" data-categories="bmV3cw==" data-listing-date-sort="1775977200000" data-listing-file-modified-sort="1776133392426" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="57">
-<a href="./posts/welcome/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top"><img src="posts/welcome/thumbnail.jpg" style="height: 150px;"  class="thumbnail-image card-img"/></p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Welcome To Conversations with qwen
-</h5>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('bmV3cw=='); return false;">news</div>
-
-</div>
-<div class="card-text listing-description delink">
-This is the first post in <code>conversations with qwen 3.5</code>. Welcome!
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Robert W. Walker
-</div>
-<div class="listing-date">
-Apr 12, 2026
-</div>
-</div>
-</div>
-</div></a>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
