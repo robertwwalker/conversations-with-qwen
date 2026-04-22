@@ -3,17 +3,18 @@
     "listing": "/index.html",
     "items": [
       "/posts/Chloe-Marcus/index.html",
-      "/posts/gemma-4-iran/index.html",
-      "/posts/iran-expectations/index.html",
       "/posts/qwen-iran/index.html",
+      "/posts/qwen-Trump-RAG/index.html",
+      "/posts/iran-expectations/index.html",
+      "/posts/gemma-4-iran/index.html",
       "/posts/gemini-iran/index.html",
-      "/posts/system-role/index.html",
-      "/posts/AI-Ethics/index.html",
       "/posts/system-role-gemini/index.html",
       "/posts/prompt-injection/index.html",
-      "/posts/EDA/index.html",
+      "/posts/AI-Ethics/index.html",
+      "/posts/system-role/index.html",
       "/posts/SweetViz/index.html",
       "/posts/YData/index.html",
+      "/posts/EDA/index.html",
       "/posts/qwen-who/index.html",
       "/posts/welcome/index.html"
     ]

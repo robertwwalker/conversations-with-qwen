@@ -6,10 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Robert W. Walker">
-<meta name="dcterms.date" content="2026-04-16">
+<meta name="dcterms.date" content="2026-04-15">
 
-<title>A Marcus/Chloe Bargain – qwen 3.5/Gemma 4 conversations</title>
+<title>qwen on US Aims in Iran – qwen 3.5/Gemma 4 conversations</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -114,24 +113,19 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">A Marcus/Chloe Bargain</h1>
+      <h1 class="title">qwen on US Aims in Iran</h1>
+            <p class="subtitle lead">qwen searches</p>
                       </div>
   </div>
     
   
   <div class="quarto-title-meta">
 
-      <div>
-      <div class="quarto-title-meta-heading">Author</div>
-      <div class="quarto-title-meta-contents">
-               <p>Robert W. Walker </p>
-            </div>
-    </div>
       
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">April 16, 2026</p>
+        <p class="date">April 15, 2026</p>
       </div>
     </div>
     
@@ -147,18 +141,8 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#gemini-weighs-in" id="toc-gemini-weighs-in" class="nav-link active" data-scroll-target="#gemini-weighs-in">Gemini Weighs In</a></li>
-  <li><a href="#salary-negotiation-outcome-range-analysis" id="toc-salary-negotiation-outcome-range-analysis" class="nav-link" data-scroll-target="#salary-negotiation-outcome-range-analysis">Salary Negotiation Outcome Range Analysis</a>
-  <ul class="collapse">
-  <li><a href="#prompt-1" id="toc-prompt-1" class="nav-link" data-scroll-target="#prompt-1">Prompt:</a></li>
-  <li><a href="#response-1" id="toc-response-1" class="nav-link" data-scroll-target="#response-1">Response:</a></li>
-  <li><a href="#negotiation-outcome-range" id="toc-negotiation-outcome-range" class="nav-link" data-scroll-target="#negotiation-outcome-range">Negotiation Outcome Range</a>
-  <ul class="collapse">
-  <li><a href="#key-driver-the-salary-relocation-trade-off" id="toc-key-driver-the-salary-relocation-trade-off" class="nav-link" data-scroll-target="#key-driver-the-salary-relocation-trade-off">Key Driver: The Salary-Relocation Trade-off</a></li>
-  <li><a href="#career-progression-and-title" id="toc-career-progression-and-title" class="nav-link" data-scroll-target="#career-progression-and-title">Career Progression and Title</a></li>
-  <li><a href="#mutual-interests-and-success-factors" id="toc-mutual-interests-and-success-factors" class="nav-link" data-scroll-target="#mutual-interests-and-success-factors">Mutual Interests and Success Factors</a></li>
-  </ul></li>
-  </ul></li>
+  <li><a href="#system-instruction" id="toc-system-instruction" class="nav-link active" data-scroll-target="#system-instruction">System Instruction</a></li>
+  <li><a href="#asking-qwen" id="toc-asking-qwen" class="nav-link" data-scroll-target="#asking-qwen">Asking qwen</a></li>
   </ul>
 </nav>
     </div>
@@ -169,257 +153,174 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p><code>qwen 3.5</code> answers <code>A bargaining range for Marcus and Chloe</code>?</p>
-<p><img src="img/SystemRole.png" class="img-fluid"></p>
+<p>tldr; qwen 3.6 is asked to RAG <code>The Art of the Deal</code> and presidential archives to intepret Donald Trump.</p>
+<p><img src="image.png" class="img-fluid"></p>
+<p><code>qwen 3.6 35B A3B</code> is a mixture of experts model open sourced by Google. The thinking steps in the post are revealing.</p>
+<section id="system-instruction" class="level1">
+<h1>System Instruction</h1>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>The System Instruction
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>You are a capable, thoughtful, and precise assistant. Always prioritize being truthful, nuanced, insightful, and efficient, tailoring your responses specifically to the user’s needs and preferences. Cite and link sources where possible.</p>
+<p>Research before answering the questions: use both reasoning and tool calls to synthesize a proper conclusion. The current month is April and the year is 2026. Search the web if you do not have the answer in your training data.</p>
+</div>
+</div>
+</section>
+<section id="asking-qwen" class="level1">
+<h1>Asking qwen</h1>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Caution</span>Prompt
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Relying on the internal context on Trump, should his statements in a conflict be interpreted truthfully or not?</p>
+</div>
+</div>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>System Role
+<span class="screen-reader-only">Note</span>Response
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>You are a capable, thoughtful, and precise assistant. Always prioritize being truthful, nuanced, insightful, and efficient, tailoring your responses specifically to the user’s needs and expressed preferences. Cite and link sources where possible and research before constructing answers: use both reasoning and tool calls to synthesize a proper conclusion. The current month is April and the year is 2026. Search the web if you do not have the answer in your training data and use English and non-English sources where available.</p>
-<section id="prompt" class="level2">
-<h2 class="anchored" data-anchor-id="prompt">Prompt</h2>
-<p>The following documents set up a salary negotiation scenario between Marcus, a job applicant and Chloe, the HR representative. Provide a characterization of the range of negotiation outcomes that could satisfy the preferences of both parties as detailed in their cases.</p>
+<p>Based on the internal context provided in <em>The Art of the Deal</em> and the records from the UCSB Presidency Project, Donald Trump’s statements in a conflict should <strong>not</strong> be interpreted as literal, objective truth. Instead, they should be interpreted as <strong>strategic communications designed to achieve a specific outcome.</strong></p>
+<p>Here is how his statements should be understood based on the provided texts:</p>
+<section id="the-concept-of-truthful-hyperbole" class="level3">
+<h3 class="anchored" data-anchor-id="the-concept-of-truthful-hyperbole">1. The Concept of “Truthful Hyperbole”</h3>
+<p>Trump explicitly defines his communication style in <em>The Art of the Deal</em> as <strong>“truthful hyperbole.”</strong> He describes it as “an innocent form of exaggeration—and a very effective form of promotion.”</p>
+<ul>
+<li><strong>Interpretation:</strong> When he makes grandiose claims or uses extreme language, he is not trying to deceive, but rather to create excitement, capture attention, and play to the public’s fantasies. The “truth” in his hyperbole is the underlying intent or goal, not the literal accuracy of the statement.</li>
+</ul>
+</section>
+<section id="words-as-tools-of-leverage" class="level3">
+<h3 class="anchored" data-anchor-id="words-as-tools-of-leverage">2. Words as Tools of Leverage</h3>
+<p>In <em>The Art of the Deal</em>, Trump emphasizes that <strong>“leverage is the biggest strength you can have.”</strong> He views language not as a means of sharing information, but as a weapon to pressure opponents and shift the ground of a negotiation.</p>
+<ul>
+<li><strong>Interpretation:</strong> In a conflict, his statements are often designed to make the other side feel vulnerable, desperate, or cornered. He may exaggerate his own strength or the other side’s weakness to gain a psychological advantage. You should interpret these statements as <strong>tactical moves in a game</strong>, not as factual reports.</li>
+</ul>
+</section>
+<section id="shifting-the-ground-and-reframing" class="level3">
+<h3 class="anchored" data-anchor-id="shifting-the-ground-and-reframing">3. “Shifting the Ground” and Reframing</h3>
+<p>Trump notes that when faced with tough questions or attacks, he tries to <strong>“frame a positive answer, even if that means shifting the ground.”</strong> He does not feel bound to answer the premise of a question if it doesn’t serve his narrative.</p>
+<ul>
+<li><strong>Interpretation:</strong> If he ignores a question, pivots to a different topic, or attacks the source of the information, he is actively trying to control the narrative. The goal is to dictate the terms of the debate rather than submit to them.</li>
+</ul>
+</section>
+<section id="confrontation-and-fighting-back" class="level3">
+<h3 class="anchored" data-anchor-id="confrontation-and-fighting-back">4. Confrontation and “Fighting Back”</h3>
+<p>A core tenet of his philosophy is to <strong>“fight back very hard”</strong> when treated unfairly. He views conflict as a zero-sum game where folding once makes you a “folder.”</p>
+<ul>
+<li><strong>Interpretation:</strong> In presidential conflicts (as seen in the UCSB tweets and executive orders), his aggressive tone, use of nicknames (“Sleepy Joe,” “Crooked Hillary”), and attacks on the media (“Fake News”) are not just emotional outbursts; they are calculated efforts to mobilize his base, bypass traditional media filters, and frame his opponents as illegitimate or corrupt.</li>
+</ul>
+</section>
+<section id="the-dollar-always-talks" class="level3">
+<h3 class="anchored" data-anchor-id="the-dollar-always-talks">5. The “Dollar Always Talks”</h3>
+<p>While he admits to using hyperbole and promotion, he also states that <strong>“you can’t con people, at least not for long”</strong> and that <strong>“the dollar always talks in the end.”</strong></p>
+<ul>
+<li><strong>Interpretation:</strong> His promotional rhetoric is a means to an end. While the words may be exaggerated, the underlying business or policy objective is serious. You should look past the hyperbole to see the <strong>practical goal</strong> he is trying to achieve (e.g., passing a tax cut, building a wall, closing a deal).</li>
+</ul>
+</section>
+<section id="summary" class="level3">
+<h3 class="anchored" data-anchor-id="summary">Summary</h3>
+<p>To interpret Trump’s statements truthfully in a conflict is to miss the point entirely. They should be read as <strong>performative and strategic.</strong> They are designed to:</p>
+<ul>
+<li><strong>Create a narrative</strong> that favors him.</li>
+<li><strong>Apply psychological pressure</strong> on opponents.</li>
+<li><strong>Mobilize his supporters</strong> through populist and confrontational messaging.</li>
+<li><strong>Control the news cycle</strong> by generating controversy.</li>
+</ul>
+<p>In short, <strong>listen to the intent, not the literal words.</strong> He is playing a game of leverage, and his words are the pieces on the board.</p>
 </section>
 </div>
 </div>
-<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout callout-style-default callout-caution callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Important</span>Response
+<span class="screen-reader-only">Caution</span>Prompt
 </div>
 </div>
-<section id="characterization-of-negotiation-outcomes-for-both-parties" class="level2 callout-body-container callout-body">
-<h2 class="anchored" data-anchor-id="characterization-of-negotiation-outcomes-for-both-parties">Characterization of Negotiation Outcomes for Both Parties</h2>
-<p>Based on the detailed case documents provided, I’ll analyze the range of outcomes that could satisfy both Chloe Vance (SnarkTech HR) and Marcus H. Dover (applicant).</p>
-<section id="key-constraints-positions" class="level3">
-<h3 class="anchored" data-anchor-id="key-constraints-positions"><strong>Key Constraints &amp; Positions</strong></h3>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 18%">
-<col style="width: 38%">
-<col style="width: 43%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Factor</th>
-<th>Chloe’s Position</th>
-<th>Marcus’s Position</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Base Salary Anchor</td>
-<td>$110,000 (due to hiring freeze)</td>
-<td>Expects minimum $130,000</td>
-</tr>
-<tr class="even">
-<td>Salary Authority Range</td>
-<td>Up to $130k normally; +$10-20k possible but reduces relocation</td>
-<td>Willing to negotiate based on market data &amp; future earning impact</td>
-</tr>
-<tr class="odd">
-<td>Position Level</td>
-<td>Sales Manager (Senior requires 5-7 years exp)</td>
-<td>Has 3 years management experience, wants Senior consideration</td>
-</tr>
-<tr class="even">
-<td>Relocation Package</td>
-<td>Executive ($20k max) contingent on $110k acceptance; Standard otherwise if higher salary negotiated</td>
-<td>Needs funds for settling costs before first paycheck</td>
-</tr>
-<tr class="odd">
-<td>Signing Bonus</td>
-<td>None offered currently</td>
-<td>Wants to discuss this possibility</td>
-</tr>
-<tr class="even">
-<td>Company Performance</td>
-<td>Top 10 best places to work, innovative, growing despite recession</td>
-<td>Recognized success with social media innovations</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="win-win-negotiation-outcome-ranges" class="level3">
-<h3 class="anchored" data-anchor-id="win-win-negotiation-outcome-ranges"><strong>Win-Win Negotiation Outcome Ranges</strong></h3>
-<section id="scenario-a-salary-acceptance-executive-relocation-chloes-preferred" class="level4">
-<h4 class="anchored" data-anchor-id="scenario-a-salary-acceptance-executive-relocation-chloes-preferred"><strong>Scenario A: Salary Acceptance + Executive Relocation (Chloe’s Preferred)</strong></h4>
+<div class="callout-body-container callout-body">
+<p>This makes a great deal of sense. In the context of an international conflict, what are the risks associated with these tactics? They seem to make goals difficult to discern.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Based on the internal context provided in <em>The Art of the Deal</em> and the records from the UCSB Presidency Project, the risks associated with using these tactics in an international conflict are significant. While they may be effective in business negotiations—where one can walk away or sue—they introduce dangerous variables in geopolitics where the stakes are often existential and alliances are long-term.</p>
+<p>Here are the primary risks:</p>
+<section id="the-boy-who-cried-wolf-effect-credibility-erosion" class="level3">
+<h3 class="anchored" data-anchor-id="the-boy-who-cried-wolf-effect-credibility-erosion">1. The “Boy Who Cried Wolf” Effect (Credibility Erosion)</h3>
+<p>In <em>The Art of the Deal</em>, Trump explicitly advocates for <strong>“truthful hyperbole”</strong>—exaggerating claims to create excitement or pressure.</p>
 <ul>
-<li><strong>Outcome:</strong> $110k base salary + executive relocation package ($20k moving allowance, company car &amp; phone)</li>
-<li><strong>Why it works for Chloe:</strong> Stays within current budget constraints; avoids using authority to raise salary beyond hiring freeze limits</li>
-<li><strong>Why it works for Marcus:</strong> Executive relocation covers immediate settling costs without depleting personal savings; preserves relationship with future performance reviewer</li>
+<li><strong>The Risk:</strong> If a leader constantly uses hyperbole (e.g., claiming “Make Mexico Pay” for a wall that is economically impossible, or threatening nuclear escalation), adversaries and allies alike may eventually stop taking threats seriously.</li>
+<li><strong>Consequence:</strong> An adversary might ignore a genuine red line, assuming it is just “bluster,” leading to a miscalculation that results in conflict. Conversely, allies might ignore warnings about a threat because they assume the President will eventually “back down” or “negotiate” it away, leaving them unprepared.</li>
 </ul>
 </section>
-<section id="scenario-b-moderate-salary-increase-partial-relocation-middle-ground" class="level4">
-<h4 class="anchored" data-anchor-id="scenario-b-moderate-salary-increase-partial-relocation-middle-ground"><strong>Scenario B: Moderate Salary Increase + Partial Relocation (Middle Ground)</strong></h4>
+<section id="strategic-instability-through-unpredictability" class="level3">
+<h3 class="anchored" data-anchor-id="strategic-instability-through-unpredictability">2. Strategic Instability through Unpredictability</h3>
+<p>Trump values unpredictability as a form of leverage. In the Wollman Rink story, he threatened to “start all over” to pressure the city, even though it was a bluff. He also notes that he likes to keep “all options open.”</p>
 <ul>
-<li><strong>Outcome:</strong> $120k-$130k base salary + reduced relocation package or partial signing bonus ($5,000-$10,000)</li>
-<li><strong>Why it works for Chloe:</strong> Uses limited authority granted (+$10-20k); acknowledges Marcus’s market value while staying within hiring freeze constraints; preserves executive relationship through compromise</li>
-<li><strong>Why it works for Marcus:</strong> Meets minimum industry standard ($130k base is achievable); immediate cash for settling costs reduces financial stress before first paycheck</li>
+<li><strong>The Risk:</strong> In international relations, unpredictability can be interpreted as <strong>irrationality</strong> rather than strength. If a leader is seen as volatile or prone to “shifting the ground” (changing the rules of the debate mid-stream), adversaries may feel compelled to strike first or escalate to “protect” themselves.</li>
+<li><strong>Consequence:</strong> This creates a “security dilemma” where other nations feel they cannot trust the US’s word, leading them to build up their own arsenals or seek alliances with US adversaries (like China or Russia) to hedge against American unpredictability.</li>
 </ul>
 </section>
-<section id="scenario-c-position-upgrade-with-salary-trade-off" class="level4">
-<h4 class="anchored" data-anchor-id="scenario-c-position-upgrade-with-salary-trade-off"><strong>Scenario C: Position Upgrade with Salary Trade-off</strong></h4>
+<section id="alienation-of-allies-transactionalism" class="level3">
+<h3 class="anchored" data-anchor-id="alienation-of-allies-transactionalism">3. Alienation of Allies (Transactionalism)</h3>
+<p>The “America First” policy and the focus on “leverage” (having something the other guy wants) suggest a purely transactional view of alliances.</p>
 <ul>
-<li><strong>Outcome:</strong> Senior Sales Manager title + $110k base salary (salary remains same but prestige increases)</li>
-<li><strong>Why it works for Chloe:</strong> Maintains budget while offering career growth opportunity; addresses Marcus’s position concerns without significant financial commitment</li>
-<li><strong>Why it works for Marcus:</strong> Greater prestige and long-term career benefits despite lower immediate cash compensation; aligns with his negotiation course training about total value</li>
+<li><strong>The Risk:</strong> Traditional alliances (like NATO) rely on mutual trust and long-term commitment, not immediate quid-pro-quo deals. By treating allies as “delinquents” or “free-riders” (as seen in the UCSB documents regarding tariffs and trade), the US risks eroding the very trust that makes those alliances work.</li>
+<li><strong>Consequence:</strong> Allies may begin to doubt the US’s commitment to their defense. If an ally believes the US President might abandon them for a “better deal” with an adversary, they may hesitate to cooperate with the US on critical security issues.</li>
 </ul>
 </section>
-</section>
-<section id="critical-success-factors" class="level3">
-<h3 class="anchored" data-anchor-id="critical-success-factors"><strong>Critical Success Factors</strong></h3>
-<ol type="1">
-<li><strong>Relationship Preservation:</strong> Chloe explicitly wants a “team player” who doesn’t squeeze every dollar; Marcus needs to maintain good relationship with future performance evaluator</li>
-<li><strong>Timing of Compensation:</strong> Marcus faces settling costs before first paycheck - signing bonus or enhanced relocation could bridge this gap without compromising long-term salary expectations</li>
-<li><strong>Future Earnings Impact:</strong> Both parties recognize entry salary affects future bonuses/raises (calculated as percentage of base)</li>
-<li><strong>Company Performance vs.&nbsp;Economic Reality:</strong> SnarkTech is doing well despite recession, but hiring freeze limits flexibility - transparency about this builds trust</li>
-</ol>
-</section>
-<section id="red-lines-to-avoid" class="level3">
-<h3 class="anchored" data-anchor-id="red-lines-to-avoid"><strong>Red Lines to Avoid</strong></h3>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 13%">
-<col style="width: 19%">
-<col style="width: 66%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Party</th>
-<th>Red Line</th>
-<th>Potential Consequence if Crossed</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Chloe</td>
-<td>Salary above $130k without justification; full executive package with high salary</td>
-<td>Breaches company hiring freeze policy; jeopardizes her credibility</td>
-</tr>
-<tr class="even">
-<td>Marcus</td>
-<td>Aggressive negotiation that damages relationship</td>
-<td>Could lose offer entirely or create difficult working relationship from day one</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="optimal-negotiation-strategy" class="level3">
-<h3 class="anchored" data-anchor-id="optimal-negotiation-strategy"><strong>Optimal Negotiation Strategy</strong></h3>
-<p>The most sustainable outcome would be <strong>Scenario B ($120-130k + partial signing bonus/relocation adjustment)</strong> because it:</p>
+<section id="incoherent-policy-bypassing-institutions" class="level3">
+<h3 class="anchored" data-anchor-id="incoherent-policy-bypassing-institutions">4. Incoherent Policy (Bypassing Institutions)</h3>
+<p>Trump’s style involves bypassing traditional channels to deal directly with “the top guy” (e.g., Jay Pritzker, Walter Hoving) and his disdain for “sitting around waiting for answers” (Wollman Rink).</p>
 <ul>
-<li>Respects company hiring freeze while acknowledging market reality</li>
-<li>Provides Marcus with immediate cash for settling costs (addressing his student loan/no savings situation)</li>
-<li>Maintains good relationship between both parties</li>
-<li>Preserves Chloe’s credibility as a recruiter who can negotiate effectively without breaking constraints</li>
-<li>Positions Marcus well for future earnings without appearing overly aggressive</li>
+<li><strong>The Risk:</strong> International diplomacy is complex and requires nuance, back-channeling, and consistency. By bypassing the State Department and communicating directly via social media or impulsive calls, the US risks sending mixed signals.</li>
+<li><strong>Consequence:</strong> A policy announced on Twitter might contradict a policy negotiated by diplomats in Geneva. This incoherence can confuse adversaries (who don’t know who is speaking for the US) and frustrate allies (who don’t know who to trust).</li>
 </ul>
-<p>This approach acknowledges the economic reality while creating value for both through creative compensation structuring rather than pure salary inflation.</p>
 </section>
+<section id="the-deal-fallacy-in-geopolitics" class="level3">
+<h3 class="anchored" data-anchor-id="the-deal-fallacy-in-geopolitics">5. The “Deal” Fallacy in Geopolitics</h3>
+<p>Trump views the world through the lens of real estate deals: “I aim very high… and then I just keep pushing.” He believes he can “make” a deal with anyone (e.g., the Soviet hotel deal in Part 5).</p>
+<ul>
+<li><strong>The Risk:</strong> Not all international conflicts are real estate deals. Issues like nuclear proliferation, terrorism, or human rights cannot always be “solved” with a handshake or a tariff.</li>
+<li><strong>Consequence:</strong> Attempting to force a “deal” on a complex geopolitical issue can lead to a collapse of the negotiation. If the adversary is not motivated by the same “leverage” (e.g., money or real estate), the tactic fails entirely.</li>
+</ul>
+</section>
+<section id="summary-1" class="level3">
+<h3 class="anchored" data-anchor-id="summary-1">Summary</h3>
+<p>The core risk is that <strong>these tactics make the US appear unreliable.</strong> In business, a “bad faith” actor might lose a specific deal but can still operate in the market. In international relations, a reputation for bad faith can lead to a loss of global influence, as other nations will be less willing to sign agreements or cooperate with a partner who is perceived as using “truthful hyperbole” and “shifting the ground” to manipulate them.</p>
 </section>
 </div>
-<section id="gemini-weighs-in" class="level1">
-<h1>Gemini Weighs In</h1>
-</section>
-<section id="salary-negotiation-outcome-range-analysis" class="level1">
-<h1>Salary Negotiation Outcome Range Analysis</h1>
-<p><strong>Link:</strong> <a href="https://gemini.google.com/app/b1292b6b4f166074">https://gemini.google.com/app/b1292b6b4f166074</a></p>
-<section id="prompt-1" class="level2">
-<h2 class="anchored" data-anchor-id="prompt-1">Prompt:</h2>
-<blockquote class="blockquote">
-<p>Chloe-Case Details - PDF</p>
-</blockquote>
-<blockquote class="blockquote">
-<p>Marcus-Case Details - PDF</p>
-</blockquote>
-<p>The following documents set up a salary negotiation scenario between Marcus, a job applicant and Chloe, the HR representative. Provide a characterization of the range of negotiation outcomes that could satisfy the preferences of both parties as detailed in their cases.</p>
-</section>
-<section id="response-1" class="level2">
-<h2 class="anchored" data-anchor-id="response-1">Response:</h2>
-<p>Based on the provided documents, a successful negotiation between Chloe (representing SnarkTech) and Marcus requires balancing Marcus’s need for financial security and career progression against SnarkTech’s budget constraints and cultural values.</p>
-<p>The following table summarizes the potential range of outcomes that could satisfy both parties:</p>
-</section>
-<section id="negotiation-outcome-range" class="level2">
-<h2 class="anchored" data-anchor-id="negotiation-outcome-range">Negotiation Outcome Range</h2>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Feature</th>
-<th>Low End (Chloe’s Preference)</th>
-<th>Mid-Range (Compromise)</th>
-<th>High End (Marcus’s Goal)</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>Job Title</strong></td>
-<td><strong>Sales Manager</strong></td>
-<td><strong>Sales Manager</strong> with a path to Senior<br><br></td>
-<td><strong>Senior Sales Manager</strong><br><br></td>
-</tr>
-<tr class="even">
-<td><strong>Base Salary</strong></td>
-<td><strong>$110,000</strong></td>
-<td><strong>$120,000</strong><br><br></td>
-<td><strong>$130,000</strong><br><br></td>
-</tr>
-<tr class="odd">
-<td><strong>Relocation</strong></td>
-<td><strong>Comprehensive Package</strong> ($20k limit)<br><br></td>
-<td><strong>Standard Package</strong> (Partial reimbursement)<br><br></td>
-<td><strong>Standard Package</strong> (Minimum flight/1 week stay)<br><br></td>
-</tr>
-<tr class="even">
-<td><strong>Performance Bonus</strong></td>
-<td><strong>Up to 70%</strong> of base<br><br></td>
-<td><strong>Up to 70%</strong> of base<br><br></td>
-<td><strong>Up to 70%</strong> (critical for long-term gains)<br><br></td>
-</tr>
-</tbody>
-</table>
-<hr>
-<section id="key-driver-the-salary-relocation-trade-off" class="level3">
-<h3 class="anchored" data-anchor-id="key-driver-the-salary-relocation-trade-off">Key Driver: The Salary-Relocation Trade-off</h3>
-<p>The most significant area for negotiation is the inverse relationship between base salary and relocation support.</p>
-<ul>
-<li><p><strong>The “Team Player” Outcome:</strong> If Marcus accepts the <strong>$110,000</strong> salary, Chloe is authorized to provide the <strong>full executive relocation package</strong>. This satisfies Chloe’s desire for a “team player” and helps Marcus with his immediate “settling down” costs without him needing to use personal savings.</p></li>
-<li><p><strong>The “Market Rate” Outcome:</strong> If Marcus pushes for <strong>$130,000</strong> (the industry norm he expects), Chloe can grant it, but she must reduce his relocation benefits to a <strong>standard hire package</strong> (one flight and one week of housing). This meets Marcus’s base salary goal but leaves him to cover significant New York moving costs out-of-pocket.</p></li>
-</ul>
-</section>
-<section id="career-progression-and-title" class="level3">
-<h3 class="anchored" data-anchor-id="career-progression-and-title">Career Progression and Title</h3>
-<p>Marcus is eager for the <strong>Senior Sales Manager</strong> title to boost his long-term prestige and earnings.</p>
-<ul>
-<li><p><strong>Chloe’s Position:</strong> She is authorized to grant the senior title if “absolutely necessary” but would expect Marcus to accept the lower <strong>$110,000</strong> salary in return for the prestige of the upgrade.</p></li>
-<li><p><strong>Marcus’s Position:</strong> He believes his three years of management experience and MBA qualify him for the role, despite the company’s usual five-to-seven-year requirement.</p></li>
-</ul>
-</section>
-<section id="mutual-interests-and-success-factors" class="level3">
-<h3 class="anchored" data-anchor-id="mutual-interests-and-success-factors">Mutual Interests and Success Factors</h3>
-<ul>
-<li><p><strong>Company Culture:</strong> Both parties value SnarkTech’s reputation as a “best place to work”. Marcus wants to feel “valued and cared for,” while Chloe wants to ensure a “smooth transition” so Marcus can hit the ground running.</p></li>
-<li><p><strong>Performance Incentives:</strong> The high <strong>70% performance bonus</strong> is a strong selling point for both. It allows SnarkTech to keep fixed costs lower during a recession while offering Marcus the “substantial bonus” potential he needs to offset a lower base salary.</p></li>
-</ul>
+</div>
 
 
-</section>
-</section>
 </section>
 
 </main> <!-- /main -->
