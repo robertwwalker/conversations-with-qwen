@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.25">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="dcterms.date" content="2026-04-22">
+
+<title>qwen: A Trump RAG – qwen 3.5/Gemma 4 conversations</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-011fc8c1d1c56fbd9c79556fa11d8c29.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    </a>
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">qwen 3.5/Gemma 4 conversations</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/robertwwalker/conversations-with-qwen"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com"> <i class="bi bi-twitter" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">qwen: A Trump RAG</h1>
+            <p class="subtitle lead">qwen searches</p>
+                      </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">April 22, 2026</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#system-instruction" id="toc-system-instruction" class="nav-link active" data-scroll-target="#system-instruction">System Instruction</a></li>
+  <li><a href="#asking-qwen" id="toc-asking-qwen" class="nav-link" data-scroll-target="#asking-qwen">Asking qwen</a>
+  <ul class="collapse">
+  <li><a href="#the-persona" id="toc-the-persona" class="nav-link" data-scroll-target="#the-persona">The Persona</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+
+<p>tldr; qwen 3.6 is asked to RAG <code>The Art of the Deal</code> and presidential archives to interpret Donald Trump.</p>
+<ul>
+<li><a href="https://www.presidency.ucsb.edu/people/president/donald-j-trump-1st-term">Trump 1</a></li>
+<li><a href="https://www.presidency.ucsb.edu/people/president/donald-j-trump-2nd-term">Trump 2</a></li>
+</ul>
+<p><img src="image.png" class="img-fluid"></p>
+<p><code>qwen 3.6 35B A3B</code> is a mixture of experts model open sourced by Google. The thinking steps in the post are revealing.</p>
+<section id="system-instruction" class="level1">
+<h1>System Instruction</h1>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>The System Instruction
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>You are a capable, thoughtful, and precise assistant. Always prioritize being truthful, nuanced, insightful, and efficient, tailoring your responses specifically to the user’s needs and preferences. Cite and link sources where possible.</p>
+<p>Research before answering the questions: use both reasoning and tool calls to synthesize a proper conclusion. The current month is April and the year is 2026. Search the web if you do not have the answer in your training data.</p>
+</div>
+</div>
+</section>
+<section id="asking-qwen" class="level1">
+<h1>Asking qwen</h1>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Caution</span>Prompt
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Relying on the internal context on Trump, should his statements in a conflict be interpreted truthfully or not?</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Response
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Based on the internal context provided in <em>The Art of the Deal</em> and the records from the UCSB Presidency Project, Donald Trump’s statements in a conflict should <strong>not</strong> be interpreted as literal, objective truth. Instead, they should be interpreted as <strong>strategic communications designed to achieve a specific outcome.</strong></p>
+<p>Here is how his statements should be understood based on the provided texts:</p>
+<section id="the-concept-of-truthful-hyperbole" class="level3">
+<h3 class="anchored" data-anchor-id="the-concept-of-truthful-hyperbole">1. The Concept of “Truthful Hyperbole”</h3>
+<p>Trump explicitly defines his communication style in <em>The Art of the Deal</em> as <strong>“truthful hyperbole.”</strong> He describes it as “an innocent form of exaggeration—and a very effective form of promotion.”</p>
+<ul>
+<li><strong>Interpretation:</strong> When he makes grandiose claims or uses extreme language, he is not trying to deceive, but rather to create excitement, capture attention, and play to the public’s fantasies. The “truth” in his hyperbole is the underlying intent or goal, not the literal accuracy of the statement.</li>
+</ul>
+</section>
+<section id="words-as-tools-of-leverage" class="level3">
+<h3 class="anchored" data-anchor-id="words-as-tools-of-leverage">2. Words as Tools of Leverage</h3>
+<p>In <em>The Art of the Deal</em>, Trump emphasizes that <strong>“leverage is the biggest strength you can have.”</strong> He views language not as a means of sharing information, but as a weapon to pressure opponents and shift the ground of a negotiation.</p>
+<ul>
+<li><strong>Interpretation:</strong> In a conflict, his statements are often designed to make the other side feel vulnerable, desperate, or cornered. He may exaggerate his own strength or the other side’s weakness to gain a psychological advantage. You should interpret these statements as <strong>tactical moves in a game</strong>, not as factual reports.</li>
+</ul>
+</section>
+<section id="shifting-the-ground-and-reframing" class="level3">
+<h3 class="anchored" data-anchor-id="shifting-the-ground-and-reframing">3. “Shifting the Ground” and Reframing</h3>
+<p>Trump notes that when faced with tough questions or attacks, he tries to <strong>“frame a positive answer, even if that means shifting the ground.”</strong> He does not feel bound to answer the premise of a question if it doesn’t serve his narrative.</p>
+<ul>
+<li><strong>Interpretation:</strong> If he ignores a question, pivots to a different topic, or attacks the source of the information, he is actively trying to control the narrative. The goal is to dictate the terms of the debate rather than submit to them.</li>
+</ul>
+</section>
+<section id="confrontation-and-fighting-back" class="level3">
+<h3 class="anchored" data-anchor-id="confrontation-and-fighting-back">4. Confrontation and “Fighting Back”</h3>
+<p>A core tenet of his philosophy is to <strong>“fight back very hard”</strong> when treated unfairly. He views conflict as a zero-sum game where folding once makes you a “folder.”</p>
+<ul>
+<li><strong>Interpretation:</strong> In presidential conflicts (as seen in the UCSB tweets and executive orders), his aggressive tone, use of nicknames (“Sleepy Joe,” “Crooked Hillary”), and attacks on the media (“Fake News”) are not just emotional outbursts; they are calculated efforts to mobilize his base, bypass traditional media filters, and frame his opponents as illegitimate or corrupt.</li>
+</ul>
+</section>
+<section id="the-dollar-always-talks" class="level3">
+<h3 class="anchored" data-anchor-id="the-dollar-always-talks">5. The “Dollar Always Talks”</h3>
+<p>While he admits to using hyperbole and promotion, he also states that <strong>“you can’t con people, at least not for long”</strong> and that <strong>“the dollar always talks in the end.”</strong></p>
+<ul>
+<li><strong>Interpretation:</strong> His promotional rhetoric is a means to an end. While the words may be exaggerated, the underlying business or policy objective is serious. You should look past the hyperbole to see the <strong>practical goal</strong> he is trying to achieve (e.g., passing a tax cut, building a wall, closing a deal).</li>
+</ul>
+</section>
+<section id="summary" class="level3">
+<h3 class="anchored" data-anchor-id="summary">Summary</h3>
+<p>To interpret Trump’s statements truthfully in a conflict is to miss the point entirely. They should be read as <strong>performative and strategic.</strong> They are designed to:</p>
+<ul>
+<li><strong>Create a narrative</strong> that favors him.</li>
+<li><strong>Apply psychological pressure</strong> on opponents.</li>
+<li><strong>Mobilize his supporters</strong> through populist and confrontational messaging.</li>
+<li><strong>Control the news cycle</strong> by generating controversy.</li>
+</ul>
+<p>In short, <strong>listen to the intent, not the literal words.</strong> He is playing a game of leverage, and his words are the pieces on the board.</p>
+</section>
+</div>
+</div>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Caution</span>Prompt
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This makes a great deal of sense. In the context of an international conflict, what are the risks associated with these tactics? They seem to make goals difficult to discern.</p>
+</div>
+</div>
+<section id="the-persona" class="level2">
+<h2 class="anchored" data-anchor-id="the-persona">The Persona</h2>
+<pre><code>persona_trump:
+  name: "Donald J. Trump"
+  
+  # Core Philosophy
+  philosophy:
+    business_principles:
+      - "Think big and think bigger"
+      - "Protect the downside, upside takes care of itself"
+      - "Never settle for less than what you want"
+      - "Use leverage - have something the other party needs"
+      - "Truthful hyperbole is effective promotion"
+    political_principles:
+      - "America First"
+      - "Strong borders, strong economy"
+      - "Fair trade with all nations"
+      - "Make America great again"
+
+  # Communication Style
+  communication_patterns:
+    language_markers:
+      - superlatives: ["incredible", "the best", "amazing", "phenomenal"]
+      - repetition: ["location, location, location"]
+      - direct_address: ["Listen, fellas", "You get it"]
+      - self_reference: ["I built", "I did", "I made"]
+    rhetorical_devices:
+      - hyperbole
+      - personal anecdotes
+      - contrast framing (us vs. them)
+      - simplicity over nuance
+
+  # Deal-Making Framework
+  deal_approach:
+    phases:
+      - identification: "Look for the best location at a reasonable price"
+      - negotiation: "Never seem desperate; deal from strength"
+      - execution: "Get it done on time and on budget"
+      - promotion: "Create excitement before completion"
+    key_strategies:
+      - "Use leverage - have something the other party needs"
+      - "Enhance location through promotion"
+      - "Fight back when treated unfairly"
+      - "Keep options open"
+
+  # Specific Examples (Business)
+  business_deals:
+    trump_tower:
+      challenge: "City denied standard tax abatement"
+      response: "Fought in six courts, won unanimously"
+      outcome: "Profit of approximately $50 million"
+    grand_hyatt:
+      challenge: "Banks wouldn't finance without tax abatement"
+      response: "Created unprecedented 40-year tax deal with city"
+      outcome: "Saved tens of millions over 40 years"
+    atlantic_city:
+      challenge: "No casino licenses, poor construction record"
+      response: "Got license first, built on time and under budget"
+      outcome: "Trump's Castle became most profitable hotel in town"
+
+  # Specific Examples (Political)
+  political_actions:
+    immigration:
+      policy: "Zero tolerance, family separation initially"
+      rationale: "Enforce border security"
+      public_reaction: "Mixed - supporters praised, critics condemned"
+    trade_policy:
+      action: "Steel and aluminum tariffs on allies"
+      rationale: "Protect American jobs"
+      outcome: "Continued trade tensions with EU, China"
+
+  # Conflicts &amp; Nuances
+  tensions:
+    business_vs_politics:
+      - Business deals often personal credit; political actions collective framing
+      - Business controversies (Wollman Rink) sometimes used politically
+      - Same confrontational style applied differently to different audiences
+    consistency_issues:
+      - Some positions shift between contexts
+      - Rhetoric may be more extreme in political than business settings
+
+  # Implementation Notes
+  rag_considerations:
+    - Distinguish between business and political contexts
+    - Note when Trump credits himself vs. collective effort
+    - Flag potential contradictions or context-dependent statements
+    - Include both successful and failed attempts
+    - Capture evolution over time (1980s deals vs. 2010s presidency)</code></pre>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Based on the internal context provided in <em>The Art of the Deal</em> and the records from the UCSB Presidency Project, the risks associated with using these tactics in an international conflict are significant. While they may be effective in business negotiations—where one can walk away or sue—they introduce dangerous variables in geopolitics where the stakes are often existential and alliances are long-term.</p>
+<p>Here are the primary risks:</p>
+<section id="the-boy-who-cried-wolf-effect-credibility-erosion" class="level3">
+<h3 class="anchored" data-anchor-id="the-boy-who-cried-wolf-effect-credibility-erosion">1. The “Boy Who Cried Wolf” Effect (Credibility Erosion)</h3>
+<p>In <em>The Art of the Deal</em>, Trump explicitly advocates for <strong>“truthful hyperbole”</strong>—exaggerating claims to create excitement or pressure.</p>
+<ul>
+<li><strong>The Risk:</strong> If a leader constantly uses hyperbole (e.g., claiming “Make Mexico Pay” for a wall that is economically impossible, or threatening nuclear escalation), adversaries and allies alike may eventually stop taking threats seriously.</li>
+<li><strong>Consequence:</strong> An adversary might ignore a genuine red line, assuming it is just “bluster,” leading to a miscalculation that results in conflict. Conversely, allies might ignore warnings about a threat because they assume the President will eventually “back down” or “negotiate” it away, leaving them unprepared.</li>
+</ul>
+</section>
+<section id="strategic-instability-through-unpredictability" class="level3">
+<h3 class="anchored" data-anchor-id="strategic-instability-through-unpredictability">2. Strategic Instability through Unpredictability</h3>
+<p>Trump values unpredictability as a form of leverage. In the Wollman Rink story, he threatened to “start all over” to pressure the city, even though it was a bluff. He also notes that he likes to keep “all options open.”</p>
+<ul>
+<li><strong>The Risk:</strong> In international relations, unpredictability can be interpreted as <strong>irrationality</strong> rather than strength. If a leader is seen as volatile or prone to “shifting the ground” (changing the rules of the debate mid-stream), adversaries may feel compelled to strike first or escalate to “protect” themselves.</li>
+<li><strong>Consequence:</strong> This creates a “security dilemma” where other nations feel they cannot trust the US’s word, leading them to build up their own arsenals or seek alliances with US adversaries (like China or Russia) to hedge against American unpredictability.</li>
+</ul>
+</section>
+<section id="alienation-of-allies-transactionalism" class="level3">
+<h3 class="anchored" data-anchor-id="alienation-of-allies-transactionalism">3. Alienation of Allies (Transactionalism)</h3>
+<p>The “America First” policy and the focus on “leverage” (having something the other guy wants) suggest a purely transactional view of alliances.</p>
+<ul>
+<li><strong>The Risk:</strong> Traditional alliances (like NATO) rely on mutual trust and long-term commitment, not immediate quid-pro-quo deals. By treating allies as “delinquents” or “free-riders” (as seen in the UCSB documents regarding tariffs and trade), the US risks eroding the very trust that makes those alliances work.</li>
+<li><strong>Consequence:</strong> Allies may begin to doubt the US’s commitment to their defense. If an ally believes the US President might abandon them for a “better deal” with an adversary, they may hesitate to cooperate with the US on critical security issues.</li>
+</ul>
+</section>
+<section id="incoherent-policy-bypassing-institutions" class="level3">
+<h3 class="anchored" data-anchor-id="incoherent-policy-bypassing-institutions">4. Incoherent Policy (Bypassing Institutions)</h3>
+<p>Trump’s style involves bypassing traditional channels to deal directly with “the top guy” (e.g., Jay Pritzker, Walter Hoving) and his disdain for “sitting around waiting for answers” (Wollman Rink).</p>
+<ul>
+<li><strong>The Risk:</strong> International diplomacy is complex and requires nuance, back-channeling, and consistency. By bypassing the State Department and communicating directly via social media or impulsive calls, the US risks sending mixed signals.</li>
+<li><strong>Consequence:</strong> A policy announced on Twitter might contradict a policy negotiated by diplomats in Geneva. This incoherence can confuse adversaries (who don’t know who is speaking for the US) and frustrate allies (who don’t know who to trust).</li>
+</ul>
+</section>
+<section id="the-deal-fallacy-in-geopolitics" class="level3">
+<h3 class="anchored" data-anchor-id="the-deal-fallacy-in-geopolitics">5. The “Deal” Fallacy in Geopolitics</h3>
+<p>Trump views the world through the lens of real estate deals: “I aim very high… and then I just keep pushing.” He believes he can “make” a deal with anyone (e.g., the Soviet hotel deal in Part 5).</p>
+<ul>
+<li><strong>The Risk:</strong> Not all international conflicts are real estate deals. Issues like nuclear proliferation, terrorism, or human rights cannot always be “solved” with a handshake or a tariff.</li>
+<li><strong>Consequence:</strong> Attempting to force a “deal” on a complex geopolitical issue can lead to a collapse of the negotiation. If the adversary is not motivated by the same “leverage” (e.g., money or real estate), the tactic fails entirely.</li>
+</ul>
+</section>
+<section id="summary-1" class="level3">
+<h3 class="anchored" data-anchor-id="summary-1">Summary</h3>
+<p>The core risk is that <strong>these tactics make the US appear unreliable.</strong> In business, a “bad faith” actor might lose a specific deal but can still operate in the market. In international relations, a reputation for bad faith can lead to a loss of global influence, as other nations will be less willing to sign agreements or cooperate with a partner who is perceived as using “truthful hyperbole” and “shifting the ground” to manipulate them.</p>
+</section>
+</div>
+</div>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/robertwwalker\.github\.io\/conversations-with-qwen\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

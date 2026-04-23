@@ -199,6 +199,282 @@ Note
   <pubDate>Wed, 22 Apr 2026 07:00:00 GMT</pubDate>
 </item>
 <item>
+  <title>qwen: A Trump RAG</title>
+  <link>https://robertwwalker.github.io/conversations-with-qwen/posts/qwen-Trump-RAG-9B/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>tldr; qwen 3.6 is asked to RAG <code>The Art of the Deal</code> and presidential archives to interpret Donald Trump.</p>
+<ul>
+<li><a href="https://www.presidency.ucsb.edu/people/president/donald-j-trump-1st-term">Trump 1</a></li>
+<li><a href="https://www.presidency.ucsb.edu/people/president/donald-j-trump-2nd-term">Trump 2</a></li>
+</ul>
+<p><img src="https://robertwwalker.github.io/conversations-with-qwen/posts/qwen-Trump-RAG-9B/image.png" class="img-fluid"></p>
+<p><code>qwen 3.6 35B A3B</code> is a mixture of experts model open sourced by Google. The thinking steps in the post are revealing.</p>
+<section id="system-instruction" class="level1">
+<h1>System Instruction</h1>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>The System Instruction
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>You are a capable, thoughtful, and precise assistant. Always prioritize being truthful, nuanced, insightful, and efficient, tailoring your responses specifically to the user’s needs and preferences. Cite and link sources where possible.</p>
+<p>Research before answering the questions: use both reasoning and tool calls to synthesize a proper conclusion. The current month is April and the year is 2026. Search the web if you do not have the answer in your training data.</p>
+</div>
+</div>
+</section>
+<section id="asking-qwen" class="level1">
+<h1>Asking qwen</h1>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Caution</span>Prompt
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Relying on the internal context on Trump, should his statements in a conflict be interpreted truthfully or not?</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Response
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Based on the internal context provided in <em>The Art of the Deal</em> and the records from the UCSB Presidency Project, Donald Trump’s statements in a conflict should <strong>not</strong> be interpreted as literal, objective truth. Instead, they should be interpreted as <strong>strategic communications designed to achieve a specific outcome.</strong></p>
+<p>Here is how his statements should be understood based on the provided texts:</p>
+<section id="the-concept-of-truthful-hyperbole" class="level3">
+<h3 class="anchored" data-anchor-id="the-concept-of-truthful-hyperbole">1. The Concept of “Truthful Hyperbole”</h3>
+<p>Trump explicitly defines his communication style in <em>The Art of the Deal</em> as <strong>“truthful hyperbole.”</strong> He describes it as “an innocent form of exaggeration—and a very effective form of promotion.”</p>
+<ul>
+<li><strong>Interpretation:</strong> When he makes grandiose claims or uses extreme language, he is not trying to deceive, but rather to create excitement, capture attention, and play to the public’s fantasies. The “truth” in his hyperbole is the underlying intent or goal, not the literal accuracy of the statement.</li>
+</ul>
+</section>
+<section id="words-as-tools-of-leverage" class="level3">
+<h3 class="anchored" data-anchor-id="words-as-tools-of-leverage">2. Words as Tools of Leverage</h3>
+<p>In <em>The Art of the Deal</em>, Trump emphasizes that <strong>“leverage is the biggest strength you can have.”</strong> He views language not as a means of sharing information, but as a weapon to pressure opponents and shift the ground of a negotiation.</p>
+<ul>
+<li><strong>Interpretation:</strong> In a conflict, his statements are often designed to make the other side feel vulnerable, desperate, or cornered. He may exaggerate his own strength or the other side’s weakness to gain a psychological advantage. You should interpret these statements as <strong>tactical moves in a game</strong>, not as factual reports.</li>
+</ul>
+</section>
+<section id="shifting-the-ground-and-reframing" class="level3">
+<h3 class="anchored" data-anchor-id="shifting-the-ground-and-reframing">3. “Shifting the Ground” and Reframing</h3>
+<p>Trump notes that when faced with tough questions or attacks, he tries to <strong>“frame a positive answer, even if that means shifting the ground.”</strong> He does not feel bound to answer the premise of a question if it doesn’t serve his narrative.</p>
+<ul>
+<li><strong>Interpretation:</strong> If he ignores a question, pivots to a different topic, or attacks the source of the information, he is actively trying to control the narrative. The goal is to dictate the terms of the debate rather than submit to them.</li>
+</ul>
+</section>
+<section id="confrontation-and-fighting-back" class="level3">
+<h3 class="anchored" data-anchor-id="confrontation-and-fighting-back">4. Confrontation and “Fighting Back”</h3>
+<p>A core tenet of his philosophy is to <strong>“fight back very hard”</strong> when treated unfairly. He views conflict as a zero-sum game where folding once makes you a “folder.”</p>
+<ul>
+<li><strong>Interpretation:</strong> In presidential conflicts (as seen in the UCSB tweets and executive orders), his aggressive tone, use of nicknames (“Sleepy Joe,” “Crooked Hillary”), and attacks on the media (“Fake News”) are not just emotional outbursts; they are calculated efforts to mobilize his base, bypass traditional media filters, and frame his opponents as illegitimate or corrupt.</li>
+</ul>
+</section>
+<section id="the-dollar-always-talks" class="level3">
+<h3 class="anchored" data-anchor-id="the-dollar-always-talks">5. The “Dollar Always Talks”</h3>
+<p>While he admits to using hyperbole and promotion, he also states that <strong>“you can’t con people, at least not for long”</strong> and that <strong>“the dollar always talks in the end.”</strong></p>
+<ul>
+<li><strong>Interpretation:</strong> His promotional rhetoric is a means to an end. While the words may be exaggerated, the underlying business or policy objective is serious. You should look past the hyperbole to see the <strong>practical goal</strong> he is trying to achieve (e.g., passing a tax cut, building a wall, closing a deal).</li>
+</ul>
+</section>
+<section id="summary" class="level3">
+<h3 class="anchored" data-anchor-id="summary">Summary</h3>
+<p>To interpret Trump’s statements truthfully in a conflict is to miss the point entirely. They should be read as <strong>performative and strategic.</strong> They are designed to:</p>
+<ul>
+<li><strong>Create a narrative</strong> that favors him.</li>
+<li><strong>Apply psychological pressure</strong> on opponents.</li>
+<li><strong>Mobilize his supporters</strong> through populist and confrontational messaging.</li>
+<li><strong>Control the news cycle</strong> by generating controversy.</li>
+</ul>
+<p>In short, <strong>listen to the intent, not the literal words.</strong> He is playing a game of leverage, and his words are the pieces on the board.</p>
+</section>
+</div>
+</div>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Caution</span>Prompt
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This makes a great deal of sense. In the context of an international conflict, what are the risks associated with these tactics? They seem to make goals difficult to discern.</p>
+</div>
+</div>
+<section id="the-persona" class="level2">
+<h2 class="anchored" data-anchor-id="the-persona">The Persona</h2>
+<pre><code>persona_trump:
+  name: "Donald J. Trump"
+  
+  # Core Philosophy
+  philosophy:
+    business_principles:
+      - "Think big and think bigger"
+      - "Protect the downside, upside takes care of itself"
+      - "Never settle for less than what you want"
+      - "Use leverage - have something the other party needs"
+      - "Truthful hyperbole is effective promotion"
+    political_principles:
+      - "America First"
+      - "Strong borders, strong economy"
+      - "Fair trade with all nations"
+      - "Make America great again"
+
+  # Communication Style
+  communication_patterns:
+    language_markers:
+      - superlatives: ["incredible", "the best", "amazing", "phenomenal"]
+      - repetition: ["location, location, location"]
+      - direct_address: ["Listen, fellas", "You get it"]
+      - self_reference: ["I built", "I did", "I made"]
+    rhetorical_devices:
+      - hyperbole
+      - personal anecdotes
+      - contrast framing (us vs. them)
+      - simplicity over nuance
+
+  # Deal-Making Framework
+  deal_approach:
+    phases:
+      - identification: "Look for the best location at a reasonable price"
+      - negotiation: "Never seem desperate; deal from strength"
+      - execution: "Get it done on time and on budget"
+      - promotion: "Create excitement before completion"
+    key_strategies:
+      - "Use leverage - have something the other party needs"
+      - "Enhance location through promotion"
+      - "Fight back when treated unfairly"
+      - "Keep options open"
+
+  # Specific Examples (Business)
+  business_deals:
+    trump_tower:
+      challenge: "City denied standard tax abatement"
+      response: "Fought in six courts, won unanimously"
+      outcome: "Profit of approximately $50 million"
+    grand_hyatt:
+      challenge: "Banks wouldn't finance without tax abatement"
+      response: "Created unprecedented 40-year tax deal with city"
+      outcome: "Saved tens of millions over 40 years"
+    atlantic_city:
+      challenge: "No casino licenses, poor construction record"
+      response: "Got license first, built on time and under budget"
+      outcome: "Trump's Castle became most profitable hotel in town"
+
+  # Specific Examples (Political)
+  political_actions:
+    immigration:
+      policy: "Zero tolerance, family separation initially"
+      rationale: "Enforce border security"
+      public_reaction: "Mixed - supporters praised, critics condemned"
+    trade_policy:
+      action: "Steel and aluminum tariffs on allies"
+      rationale: "Protect American jobs"
+      outcome: "Continued trade tensions with EU, China"
+
+  # Conflicts &amp; Nuances
+  tensions:
+    business_vs_politics:
+      - Business deals often personal credit; political actions collective framing
+      - Business controversies (Wollman Rink) sometimes used politically
+      - Same confrontational style applied differently to different audiences
+    consistency_issues:
+      - Some positions shift between contexts
+      - Rhetoric may be more extreme in political than business settings
+
+  # Implementation Notes
+  rag_considerations:
+    - Distinguish between business and political contexts
+    - Note when Trump credits himself vs. collective effort
+    - Flag potential contradictions or context-dependent statements
+    - Include both successful and failed attempts
+    - Capture evolution over time (1980s deals vs. 2010s presidency)</code></pre>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Based on the internal context provided in <em>The Art of the Deal</em> and the records from the UCSB Presidency Project, the risks associated with using these tactics in an international conflict are significant. While they may be effective in business negotiations—where one can walk away or sue—they introduce dangerous variables in geopolitics where the stakes are often existential and alliances are long-term.</p>
+<p>Here are the primary risks:</p>
+<section id="the-boy-who-cried-wolf-effect-credibility-erosion" class="level3">
+<h3 class="anchored" data-anchor-id="the-boy-who-cried-wolf-effect-credibility-erosion">1. The “Boy Who Cried Wolf” Effect (Credibility Erosion)</h3>
+<p>In <em>The Art of the Deal</em>, Trump explicitly advocates for <strong>“truthful hyperbole”</strong>—exaggerating claims to create excitement or pressure.</p>
+<ul>
+<li><strong>The Risk:</strong> If a leader constantly uses hyperbole (e.g., claiming “Make Mexico Pay” for a wall that is economically impossible, or threatening nuclear escalation), adversaries and allies alike may eventually stop taking threats seriously.</li>
+<li><strong>Consequence:</strong> An adversary might ignore a genuine red line, assuming it is just “bluster,” leading to a miscalculation that results in conflict. Conversely, allies might ignore warnings about a threat because they assume the President will eventually “back down” or “negotiate” it away, leaving them unprepared.</li>
+</ul>
+</section>
+<section id="strategic-instability-through-unpredictability" class="level3">
+<h3 class="anchored" data-anchor-id="strategic-instability-through-unpredictability">2. Strategic Instability through Unpredictability</h3>
+<p>Trump values unpredictability as a form of leverage. In the Wollman Rink story, he threatened to “start all over” to pressure the city, even though it was a bluff. He also notes that he likes to keep “all options open.”</p>
+<ul>
+<li><strong>The Risk:</strong> In international relations, unpredictability can be interpreted as <strong>irrationality</strong> rather than strength. If a leader is seen as volatile or prone to “shifting the ground” (changing the rules of the debate mid-stream), adversaries may feel compelled to strike first or escalate to “protect” themselves.</li>
+<li><strong>Consequence:</strong> This creates a “security dilemma” where other nations feel they cannot trust the US’s word, leading them to build up their own arsenals or seek alliances with US adversaries (like China or Russia) to hedge against American unpredictability.</li>
+</ul>
+</section>
+<section id="alienation-of-allies-transactionalism" class="level3">
+<h3 class="anchored" data-anchor-id="alienation-of-allies-transactionalism">3. Alienation of Allies (Transactionalism)</h3>
+<p>The “America First” policy and the focus on “leverage” (having something the other guy wants) suggest a purely transactional view of alliances.</p>
+<ul>
+<li><strong>The Risk:</strong> Traditional alliances (like NATO) rely on mutual trust and long-term commitment, not immediate quid-pro-quo deals. By treating allies as “delinquents” or “free-riders” (as seen in the UCSB documents regarding tariffs and trade), the US risks eroding the very trust that makes those alliances work.</li>
+<li><strong>Consequence:</strong> Allies may begin to doubt the US’s commitment to their defense. If an ally believes the US President might abandon them for a “better deal” with an adversary, they may hesitate to cooperate with the US on critical security issues.</li>
+</ul>
+</section>
+<section id="incoherent-policy-bypassing-institutions" class="level3">
+<h3 class="anchored" data-anchor-id="incoherent-policy-bypassing-institutions">4. Incoherent Policy (Bypassing Institutions)</h3>
+<p>Trump’s style involves bypassing traditional channels to deal directly with “the top guy” (e.g., Jay Pritzker, Walter Hoving) and his disdain for “sitting around waiting for answers” (Wollman Rink).</p>
+<ul>
+<li><strong>The Risk:</strong> International diplomacy is complex and requires nuance, back-channeling, and consistency. By bypassing the State Department and communicating directly via social media or impulsive calls, the US risks sending mixed signals.</li>
+<li><strong>Consequence:</strong> A policy announced on Twitter might contradict a policy negotiated by diplomats in Geneva. This incoherence can confuse adversaries (who don’t know who is speaking for the US) and frustrate allies (who don’t know who to trust).</li>
+</ul>
+</section>
+<section id="the-deal-fallacy-in-geopolitics" class="level3">
+<h3 class="anchored" data-anchor-id="the-deal-fallacy-in-geopolitics">5. The “Deal” Fallacy in Geopolitics</h3>
+<p>Trump views the world through the lens of real estate deals: “I aim very high… and then I just keep pushing.” He believes he can “make” a deal with anyone (e.g., the Soviet hotel deal in Part 5).</p>
+<ul>
+<li><strong>The Risk:</strong> Not all international conflicts are real estate deals. Issues like nuclear proliferation, terrorism, or human rights cannot always be “solved” with a handshake or a tariff.</li>
+<li><strong>Consequence:</strong> Attempting to force a “deal” on a complex geopolitical issue can lead to a collapse of the negotiation. If the adversary is not motivated by the same “leverage” (e.g., money or real estate), the tactic fails entirely.</li>
+</ul>
+</section>
+<section id="summary-1" class="level3">
+<h3 class="anchored" data-anchor-id="summary-1">Summary</h3>
+<p>The core risk is that <strong>these tactics make the US appear unreliable.</strong> In business, a “bad faith” actor might lose a specific deal but can still operate in the market. In international relations, a reputation for bad faith can lead to a loss of global influence, as other nations will be less willing to sign agreements or cooperate with a partner who is perceived as using “truthful hyperbole” and “shifting the ground” to manipulate them.</p>
+</section>
+</div>
+</div>
+
+
+</section>
+</section>
+
+ ]]></description>
+  <guid>https://robertwwalker.github.io/conversations-with-qwen/posts/qwen-Trump-RAG-9B/</guid>
+  <pubDate>Wed, 22 Apr 2026 07:00:00 GMT</pubDate>
+</item>
+<item>
   <title>A Marcus/Chloe Bargain</title>
   <dc:creator>Robert W. Walker</dc:creator>
   <link>https://robertwwalker.github.io/conversations-with-qwen/posts/Chloe-Marcus/</link>
