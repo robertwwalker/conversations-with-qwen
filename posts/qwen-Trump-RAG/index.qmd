@@ -1,7 +1,7 @@
 ---
-title: "qwen on US Aims in Iran"
+title: "qwen: A Trump RAG"
 subtitle: "qwen searches"
-date: "2026-04-15"
+date: "2026-04-22"
 format:
   html:
     toc: true
@@ -9,7 +9,10 @@ format:
     image: image.png
 ---
 
-tldr; qwen 3.6 is asked to RAG `The Art of the Deal` and presidential archives to intepret Donald Trump.
+tldr; qwen 3.6 is asked to RAG `The Art of the Deal` and presidential archives to interpret Donald Trump.
+
+- [Trump 1](https://www.presidency.ucsb.edu/people/president/donald-j-trump-1st-term)
+- [Trump 2](https://www.presidency.ucsb.edu/people/president/donald-j-trump-2nd-term)
 
 ![](image.png)
 
